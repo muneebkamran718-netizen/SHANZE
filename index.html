@@ -1,3 +1,761 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Shanze ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height:100vh;
+    background:#fff9df;
+    color:#4b351d;
+    font-family:"Cormorant Garamond",serif;
+    overflow-x:hidden;
+}
+
+.screen{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+}
+
+.hidden{
+    display:none !important;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.sunflower{
+    font-size:90px;
+    margin-bottom:20px;
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+}
+
+h1{
+    font-size:clamp(45px,9vw,85px);
+    font-weight:600;
+}
+
+h2{
+    font-size:clamp(35px,7vw,65px);
+    margin-bottom:20px;
+}
+
+p{
+    font-size:22px;
+    line-height:1.5;
+}
+
+input{
+    width:min(90%,380px);
+    padding:15px 20px;
+    margin:22px 0 12px;
+    border:1px solid #d8ba4c;
+    border-radius:40px;
+    background:#fffef5;
+    font-family:inherit;
+    font-size:19px;
+    text-align:center;
+    outline:none;
+}
+
+button{
+    border:none;
+    border-radius:40px;
+    padding:14px 27px;
+    margin:8px;
+    background:#e8c94e;
+    color:#4b351d;
+    font-family:inherit;
+    font-size:20px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(100,80,20,.18);
+}
+
+#error{
+    color:#a33;
+}
+
+.countdown{
+    font-size:clamp(35px,8vw,75px);
+    font-weight:600;
+    margin:25px 0;
+}
+
+.birthday{
+    font-size:clamp(45px,10vw,95px);
+    line-height:1;
+    font-weight:700;
+}
+
+.panda-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin-top:35px;
+}
+
+.panda-card{
+    background:#fffef3;
+    border:1px solid #ead37a;
+    border-radius:25px;
+    padding:25px 15px;
+    box-shadow:0 8px 25px rgba(100,80,20,.10);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.panda-card:hover{
+    transform:translateY(-7px);
+}
+
+.panda{
+    font-size:60px;
+    margin-bottom:12px;
+}
+
+.panda-card h3{
+    font-size:25px;
+}
+
+.content{
+    width:100%;
+    max-width:950px;
+    padding:35px 10px;
+}
+
+.memory-grid,
+.people-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:25px;
+}
+
+.card{
+    background:#fffef3;
+    border:1px solid #ead37a;
+    border-radius:22px;
+    padding:18px;
+    box-shadow:0 8px 25px rgba(100,80,20,.10);
+}
+
+.card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:16px;
+    background:#eee2a9;
+}
+
+.editable{
+    margin-top:12px;
+    padding:10px;
+    min-height:45px;
+    border:1px dashed #d7b94b;
+    border-radius:10px;
+    font-size:19px;
+    outline:none;
+}
+
+.song-card{
+    max-width:650px;
+    margin:15px auto;
+    background:#fffef3;
+    border:1px solid #ead37a;
+    border-radius:20px;
+    padding:20px;
+}
+
+.song-card h3{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.person-card{
+    font-size:20px;
+    min-height:130px;
+}
+
+.back{
+    margin-top:30px;
+}
+
+.petal{
+    position:fixed;
+    top:-30px;
+    font-size:20px;
+    pointer-events:none;
+    animation:fall linear forwards;
+    opacity:.7;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+@media(max-width:600px){
+
+    .panda-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .panda-card{
+        padding:18px 8px;
+    }
+
+    .panda{
+        font-size:45px;
+    }
+
+    .panda-card h3{
+        font-size:20px;
+    }
+
+    p{
+        font-size:20px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- ================= PASSWORD ================= -->
+
+<section id="passwordScreen" class="screen">
+
+```
+<div class="container">
+
+    <div class="sunflower">🌻</div>
+
+    <h1>For Shanze ❤️</h1>
+
+    <p>Something special is waiting for you...</p>
+
+    <input
+        id="passwordInput"
+        type="password"
+        placeholder="Enter the password"
+        onkeydown="if(event.key==='Enter') checkPassword()"
+    >
+
+    <br>
+
+    <button onclick="checkPassword()">
+        Open ❤️
+    </button>
+
+    <p id="passwordError"></p>
+
+</div>
+```
+
+</section>
+
+<!-- ================= COUNTDOWN ================= -->
+
+<section id="countdownScreen" class="screen hidden">
+
+```
+<div class="container">
+
+    <div class="sunflower">🌻</div>
+
+    <h2>Something special is coming...</h2>
+
+    <div id="countdown" class="countdown">
+        Loading...
+    </div>
+
+    <p>Wait for it, baby ❤️</p>
+
+</div>
+```
+
+</section>
+
+<!-- ================= BIRTHDAY ================= -->
+
+<section id="birthdayScreen" class="screen hidden">
+
+```
+<div class="container">
+
+    <div class="sunflower">🌻</div>
+
+    <div class="birthday">
+        HAPPY BIRTHDAY BABY ❤️
+    </div>
+
+    <p style="margin-top:25px;">
+        I HAVE A SURPRISE FOR YOU...
+    </p>
+
+    <button onclick="openPandas()" style="margin-top:25px;">
+        Open Your Surprise 🎁
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- ================= PANDA MENU ================= -->
+
+<section id="pandaScreen" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>For My Shanze ❤️</h2>
+
+    <p>Choose something...</p>
+
+    <div class="panda-grid">
+
+        <div class="panda-card" onclick="showSection('letter')">
+            <div class="panda">🐼</div>
+            <h3>A Letter From Me 💌</h3>
+        </div>
+
+        <div class="panda-card" onclick="showSection('memories')">
+            <div class="panda">🐼</div>
+            <h3>Our Memories 📸</h3>
+        </div>
+
+        <div class="panda-card" onclick="showSection('songs')">
+            <div class="panda">🐼</div>
+            <h3>Songs That Remind Me Of Her 🎵</h3>
+        </div>
+
+        <div class="panda-card" onclick="showSection('catchphrases')">
+            <div class="panda">🐼</div>
+            <h3>Shanze's Catchphrases 😂</h3>
+        </div>
+
+        <div class="panda-card" onclick="showSection('people')">
+            <div class="panda">🐼</div>
+            <h3>Words From Her People 🥹</h3>
+        </div>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ================= LETTER ================= -->
+
+<section id="letter" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>A Letter From Me 💌</h2>
+
+    <div class="card">
+
+        <div class="editable" contenteditable="true">
+            Write your letter to Shanze here ❤️
+        </div>
+
+    </div>
+
+    <button class="back" onclick="backToPandas()">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- ================= MEMORIES ================= -->
+
+<section id="memories" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>Our Memories 📸</h2>
+
+    <button onclick="toggleMemoryMusic()">
+        🎵 Play / Pause Music
+    </button>
+
+    <audio id="memoryMusic" loop>
+        <source src="music_memories.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="memory-grid">
+
+        <div class="card">
+            <img src="photo1.jpg" alt="Memory 1">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo2.jpg" alt="Memory 2">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo3.jpg" alt="Memory 3">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo4.jpg" alt="Memory 4">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo5.jpg" alt="Memory 5">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="photo6.jpg" alt="Memory 6">
+            <div class="editable" contenteditable="true">
+                Write something about this memory ❤️
+            </div>
+        </div>
+
+    </div>
+
+    <button class="back" onclick="backToPandas()">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- ================= SONGS ================= -->
+
+<section id="songs" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>Songs That Remind Me Of Her 🎵</h2>
+
+    <div class="song-card">
+
+        <h3>Song One ❤️</h3>
+
+        <button onclick="playSong('song1')">
+            ▶ Play
+        </button>
+
+        <audio id="song1">
+            <source src="song1.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+    <div class="song-card">
+
+        <h3>Song Two ❤️</h3>
+
+        <button onclick="playSong('song2')">
+            ▶ Play
+        </button>
+
+        <audio id="song2">
+            <source src="song2.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+    <div class="song-card">
+
+        <h3>Song Three ❤️</h3>
+
+        <button onclick="playSong('song3')">
+            ▶ Play
+        </button>
+
+        <audio id="song3">
+            <source src="song3.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+
+    <div class="song-card">
+
+        <h3>Song Four ❤️</h3>
+
+        <button onclick="playSong('song4')">
+            ▶ Play
+        </button>
+
+        <audio id="song4">
+            <source src="song4.mp3" type="audio/mpeg">
+        </audio>
+
+    </div>
+
+    <button class="back" onclick="backToPandas()">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- ================= CATCHPHRASES ================= -->
+
+<section id="catchphrases" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>Shanze's Catchphrases 😂</h2>
+
+    <div class="card">
+        <div class="editable" contenteditable="true">
+            Catchphrase #1 😂
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:15px;">
+        <div class="editable" contenteditable="true">
+            Catchphrase #2 😂
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:15px;">
+        <div class="editable" contenteditable="true">
+            Catchphrase #3 😂
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:15px;">
+        <div class="editable" contenteditable="true">
+            Catchphrase #4 😂
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:15px;">
+        <div class="editable" contenteditable="true">
+            Catchphrase #5 😂
+        </div>
+    </div>
+
+    <div class="card" style="margin-top:15px;">
+        <div class="editable" contenteditable="true">
+            Catchphrase #6 😂
+        </div>
+    </div>
+
+    <button class="back" onclick="backToPandas()">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<!-- ================= PEOPLE ================= -->
+
+<section id="people" class="screen hidden">
+
+```
+<div class="content">
+
+    <h2>Words From Her People 🥹</h2>
+
+    <button onclick="toggleFriendsMusic()">
+        🎵 Play / Pause Music
+    </button>
+
+    <audio id="friendsMusic" loop>
+        <source src="music_friends.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="people-grid">
+
+        <div class="person-card">
+            <strong>Person 1</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 2</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 3</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 4</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 5</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 6</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 7</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 8</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 9</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 10</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 11</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 12</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 13</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 14</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+        <div class="person-card">
+            <strong>Person 15</strong>
+            <div class="editable" contenteditable="true">
+                Write their message here ❤️
+            </div>
+        </div>
+
+    </div>
+
+    <button class="back" onclick="backToPandas()">
+        ← Back
+    </button>
+
+</div>
+```
+
+</section>
+
+<script>
+
+const PASSWORD = "iloveyou1000";
+
+const birthdayDate =
+    new Date("2026-11-06T00:00:00").getTime();
+
+
 function checkPassword(){
 
     const password =
@@ -6,11 +764,17 @@ function checkPassword(){
     const error =
         document.getElementById("passwordError");
 
-    if(password === "iloveyou1000"){
+    if(password === PASSWORD){
 
-        document.getElementById("passwordScreen").style.display="none";
+        document
+            .getElementById("passwordScreen")
+            .classList.add("hidden");
 
-        document.getElementById("countdownScreen").style.display="flex";
+        document
+            .getElementById("countdownScreen")
+            .classList.remove("hidden");
+
+        error.innerHTML = "";
 
         startCountdown();
 
@@ -21,3 +785,251 @@ function checkPassword(){
 
     }
 }
+
+
+function startCountdown(){
+
+    function update(){
+
+        const now = new Date().getTime();
+
+        const distance = birthdayDate - now;
+
+        if(distance <= 0){
+
+            clearInterval(timer);
+
+            showBirthday();
+
+            return;
+        }
+
+        const days =
+            Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        const hours =
+            Math.floor(
+                (distance % (1000 * 60 * 60 * 24))
+                / (1000 * 60 * 60)
+            );
+
+        const minutes =
+            Math.floor(
+                (distance % (1000 * 60 * 60))
+                / (1000 * 60)
+            );
+
+        const seconds =
+            Math.floor(
+                (distance % (1000 * 60))
+                / 1000
+            );
+
+        document.getElementById("countdown").innerHTML =
+            days + "d " +
+            hours + "h " +
+            minutes + "m " +
+            seconds + "s";
+
+    }
+
+    update();
+
+    const timer = setInterval(update,1000);
+}
+
+
+function showBirthday(){
+
+    document
+        .getElementById("countdownScreen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("birthdayScreen")
+        .classList.remove("hidden");
+
+    startPetals();
+
+}
+
+
+function openPandas(){
+
+    document
+        .getElementById("birthdayScreen")
+        .classList.add("hidden");
+
+    document
+        .getElementById("pandaScreen")
+        .classList.remove("hidden");
+
+}
+
+
+function showSection(id){
+
+    stopAllMusic();
+
+    document
+        .getElementById("pandaScreen")
+        .classList.add("hidden");
+
+    document
+        .querySelectorAll("section")
+        .forEach(section => {
+
+            if(
+                section.id !== "passwordScreen" &&
+                section.id !== "countdownScreen" &&
+                section.id !== "birthdayScreen" &&
+                section.id !== "pandaScreen"
+            ){
+                section.classList.add("hidden");
+            }
+
+        });
+
+    document
+        .getElementById(id)
+        .classList.remove("hidden");
+
+}
+
+
+function backToPandas(){
+
+    stopAllMusic();
+
+    document
+        .querySelectorAll("section")
+        .forEach(section => {
+
+            if(
+                section.id !== "passwordScreen" &&
+                section.id !== "countdownScreen" &&
+                section.id !== "birthdayScreen"
+            ){
+                section.classList.add("hidden");
+            }
+
+        });
+
+    document
+        .getElementById("pandaScreen")
+        .classList.remove("hidden");
+
+}
+
+
+function stopAllMusic(){
+
+    document
+        .querySelectorAll("audio")
+        .forEach(audio => {
+
+            audio.pause();
+            audio.currentTime = 0;
+
+        });
+
+}
+
+
+function toggleMemoryMusic(){
+
+    stopFriendsMusicOnly();
+
+    const music =
+        document.getElementById("memoryMusic");
+
+    if(music.paused){
+        music.play();
+    }else{
+        music.pause();
+    }
+
+}
+
+
+function stopFriendsMusicOnly(){
+
+    const music =
+        document.getElementById("friendsMusic");
+
+    music.pause();
+    music.currentTime = 0;
+
+}
+
+
+function toggleFriendsMusic(){
+
+    stopMemoryMusicOnly();
+
+    const music =
+        document.getElementById("friendsMusic");
+
+    if(music.paused){
+        music.play();
+    }else{
+        music.pause();
+    }
+
+}
+
+
+function stopMemoryMusicOnly(){
+
+    const music =
+        document.getElementById("memoryMusic");
+
+    music.pause();
+    music.currentTime = 0;
+
+}
+
+
+function playSong(id){
+
+    stopAllMusic();
+
+    const song =
+        document.getElementById(id);
+
+    song.play();
+
+}
+
+
+function startPetals(){
+
+    setInterval(() => {
+
+        const petal =
+            document.createElement("div");
+
+        petal.className = "petal";
+
+        petal.innerHTML = "🌼";
+
+        petal.style.left =
+            Math.random() * 100 + "vw";
+
+        petal.style.animationDuration =
+            (5 + Math.random() * 5) + "s";
+
+        document.body.appendChild(petal);
+
+        setTimeout(() => {
+            petal.remove();
+        },10000);
+
+    },700);
+
+}
+
+</script>
+
+</body>
+</html>
