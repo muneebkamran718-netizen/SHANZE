@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Shanze ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, serif;
+    background: #0d0710;
+    color: white;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.4);
+    background: rgba(255,255,255,.12);
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+/* SECTION 1 */
+
+.hero {
+    background:
+    radial-gradient(circle at center, #542044 0%, #1b0b1d 45%, #0d0710 100%);
+}
+
+.small {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    opacity: .7;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(55px, 13vw, 130px);
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: .85;
+    max-width: 500px;
+    line-height: 1.7;
+}
+
+.enter {
+    margin-top: 45px;
+    padding: 14px 30px;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.enter:hover {
+    background: white;
+    color: #1b0b1d;
+}
+
+/* SECTION 2 */
+
+.memories {
+    background: #120a12;
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: normal;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    opacity: .65;
+    margin-bottom: 40px;
+}
+
+.gallery {
+    width: min(900px, 95%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.photo {
+    height: 280px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #3a1934, #1c1020);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.1);
+}
+
+.photo span {
+    opacity: .5;
+}
+
+/* SECTION 3 */
+
+.letter {
+    background:
+    radial-gradient(circle at center, #35152d, #100810 70%);
+}
+
+.letter-box {
+    max-width: 700px;
+    padding: 45px;
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 25px;
+    background: rgba(255,255,255,.04);
+    backdrop-filter: blur(10px);
+}
+
+.letter-box p {
+    line-height: 2;
+    font-size: 18px;
+    opacity: .9;
+}
+
+/* SECTION 4 */
+
+.future {
+    background: #0b070d;
+}
+
+.future-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: min(500px, 90%);
+}
+
+.future-item {
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.final {
+    margin-top: 50px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* HEARTS */
+
+.heart {
+    position: fixed;
+    bottom: -20px;
+    animation: float 6s linear forwards;
+    pointer-events: none;
+    opacity: .8;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: .8;
+    }
+
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo {
+        height: 230px;
+    }
+
+    .letter-box {
+        padding: 28px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- SECTION 1 -->
+
+<section class="hero">
+
+    <div class="small">A little something for</div>
+
+    <h1>Shanze</h1>
+
+    <p>
+        In a world full of people,
+        somehow I found you.
+        And that's something I'll always be grateful for.
+    </p>
+
+    <a href="#memories" class="enter">
+        Open my heart ↓
+    </a>
+
+</section>
+
+
+<!-- SECTION 2 -->
+
+<section class="memories" id="memories">
+
+    <div class="small">Chapter One</div>
+
+    <h2>Our Memories</h2>
+
+    <p class="subtitle">
+        Some moments deserve to be remembered forever.
+    </p>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <span>📸 Our first picture</span>
+        </div>
+
+        <div class="photo">
+            <span>📸 A favorite memory</span>
+        </div>
+
+        <div class="photo">
+            <span>📸 One of my favorite days</span>
+        </div>
+
+        <div class="photo">
+            <span>📸 Just us ❤️</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SECTION 3 -->
+
+<section class="letter">
+
+    <div class="small">Chapter Two</div>
+
+    <h2>A Letter For You</h2>
+
+    <div class="letter-box">
+
+        <p>
+            Dear Shanze,
+            <br><br>
+
+            I don't know if words can ever properly explain
+            what you mean to me.
+            <br><br>
+
+            But I want you to know that having you in my life
+            is something I genuinely appreciate.
+            Every laugh, every conversation, every little moment
+            becomes a memory I want to keep.
+            <br><br>
+
+            Thank you for being you.
+            ❤️
+            <br><br>
+
+            Yours,
+            <br>
+            <i>Me</i>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SECTION 4 -->
+
+<section class="future">
+
+    <div class="small">Chapter Three</div>
+
+    <h2>Our Little Future</h2>
+
+    <p class="subtitle">
+        More memories are waiting for us.
+    </p>
+
+    <div class="future-list">
+
+        <div class="future-item">
+            🌙 Late night
