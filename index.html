@@ -1049,23 +1049,7 @@ function openSection(id){
 
     document
     .getElementById(id)
-    .classList.remove("hidden");
-
-    // Automatically play music for specific sections
-    if(id === "memories"){
-        const music = document.getElementById("memoryMusic");
-        if(music){
-            music.play();
-        }
-    }
-
-    if(id === "people"){
-        const music = document.getElementById("friendsMusic");
-        if(music){
-            music.play();
-        }
-    }
-}
+    .classList.remove("hidden")
 
 }
 
