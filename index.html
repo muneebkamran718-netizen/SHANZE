@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -45,8 +46,6 @@ button{
     position:relative;
 }
 
-/* FLOATING FLOWERS */
-
 .petal{
     position:fixed;
     top:-30px;
@@ -62,8 +61,6 @@ button{
         transform:translateY(110vh) rotate(360deg);
     }
 }
-
-/* GENERAL */
 
 h1{
     font-family:"Playfair Display",serif;
@@ -97,8 +94,6 @@ h1{
     margin-bottom:25px;
 }
 
-/* PASSWORD */
-
 .password-box{
     max-width:450px;
     width:100%;
@@ -129,8 +124,6 @@ input{
     margin-top:12px;
     font-size:17px;
 }
-
-/* COUNTDOWN */
 
 .countdown-box{
     max-width:850px;
@@ -170,8 +163,6 @@ input{
     background:#6c5425;
 }
 
-/* BIRTHDAY */
-
 .birthday-box{
     animation:fadeIn 1s ease;
 }
@@ -202,8 +193,6 @@ input{
         transform:translateY(0);
     }
 }
-
-/* MENU */
 
 .menu{
     width:100%;
@@ -239,8 +228,6 @@ input{
     margin-bottom:8px;
 }
 
-/* CONTENT */
-
 .content{
     width:100%;
     max-width:950px;
@@ -255,8 +242,6 @@ input{
     box-shadow:0 10px 30px rgba(100,70,10,.1);
 }
 
-/* LETTER */
-
 .letter{
     font-size:22px;
     line-height:1.7;
@@ -264,8 +249,6 @@ input{
     min-height:300px;
     outline:none;
 }
-
-/* MEMORIES */
 
 .memory-grid{
     display:grid;
@@ -291,8 +274,6 @@ input{
     font-size:19px;
 }
 
-/* SONGS */
-
 .song{
     display:flex;
     align-items:center;
@@ -313,8 +294,6 @@ input{
     border-radius:20px;
     font-size:16px;
 }
-
-/* DETAILS */
 
 .details-grid{
     display:grid;
@@ -346,8 +325,6 @@ input{
     outline:none;
 }
 
-/* PEOPLE */
-
 .people-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
@@ -372,7 +349,34 @@ input{
     outline:none;
 }
 
-/* MOBILE */
+/* SAVE BUTTON */
+
+.save-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+    border:none;
+    padding:13px 22px;
+    border-radius:30px;
+    background:#d9a928;
+    color:white;
+    font-family:inherit;
+    font-size:18px;
+    box-shadow:0 8px 20px rgba(150,110,20,.25);
+}
+
+.save-message{
+    position:fixed;
+    bottom:70px;
+    right:20px;
+    z-index:999;
+    background:white;
+    padding:10px 16px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    display:none;
+}
 
 @media(max-width:650px){
 
@@ -412,21 +416,20 @@ input{
         height:240px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- FLOATING FLOWERS -->
+<button class="save-btn" onclick="saveEdits()">Save Changes ❤️</button>
+<div id="saveMessage" class="save-message">Saved ❤️</div>
 
 <div class="petal" style="left:8%;animation-duration:8s;">🌼</div>
 <div class="petal" style="left:25%;animation-duration:11s;">🌸</div>
 <div class="petal" style="left:45%;animation-duration:9s;">🌼</div>
 <div class="petal" style="left:68%;animation-duration:12s;">🌸</div>
 <div class="petal" style="left:88%;animation-duration:10s;">🌼</div>
-
-
-<!-- PASSWORD -->
 
 <section id="passwordScreen" class="screen">
 
@@ -455,9 +458,6 @@ Open ❤️
 </div>
 
 </section>
-
-
-<!-- COUNTDOWN -->
 
 <section id="countdownScreen" class="screen hidden">
 
@@ -503,9 +503,6 @@ Enter My Surprise ❤️
 
 </section>
 
-
-<!-- BIRTHDAY -->
-
 <section id="birthdayScreen" class="screen hidden">
 
 <div class="birthday-box">
@@ -525,9 +522,6 @@ Open Your Surprise 🎁
 </div>
 
 </section>
-
-
-<!-- MENU -->
 
 <section id="menuScreen" class="screen hidden">
 
@@ -568,9 +562,6 @@ Words From Her People 🥹
 
 </section>
 
-
-<!-- LETTER -->
-
 <section id="letter" class="screen hidden">
 
 <div class="content">
@@ -597,9 +588,6 @@ Everything in this section can be edited ❤️
 
 </section>
 
-
-<!-- MEMORIES -->
-
 <section id="memories" class="screen hidden">
 
 <div class="content">
@@ -621,45 +609,45 @@ Everything in this section can be edited ❤️
 <div class="memory-grid">
 
 <div class="card memory">
-  <img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our Memory 1">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our Memory 1">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 <div class="card memory">
-  <img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our Memory 2">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our Memory 2">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 <div class="card memory">
-  <img src="3.jpeg" alt="Our Memory 3">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="3.jpeg" alt="Our Memory 3">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 <div class="card memory">
-  <img src="4.jpeg" alt="Our Memory 4">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="4.jpeg" alt="Our Memory 4">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 <div class="card memory">
-  <img src="5.jpeg" alt="Our Memory 5">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="5.jpeg" alt="Our Memory 5">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 <div class="card memory">
-  <img src="6.jpeg" alt="Our Memory 6">
-  <div class="editable" contenteditable="true">
-    Write something about this memory...
-  </div>
+<img src="6.jpeg" alt="Our Memory 6">
+<div class="editable" contenteditable="true">
+Write something about this memory...
+</div>
 </div>
 
 </div>
@@ -667,9 +655,6 @@ Everything in this section can be edited ❤️
 </div>
 
 </section>
-
-
-<!-- SONGS -->
 
 <section id="songs" class="screen hidden">
 
@@ -682,27 +667,27 @@ Everything in this section can be edited ❤️
 <div class="card">
 
 <div class="song">
-  <span><h3>Birds of a Feather ❤️</h3></span>
-  <button onclick="playSong('song1',this)">▶ Play</button>
-  <audio id="song1" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio>
+<span><h3>Birds of a Feather ❤️</h3></span>
+<button onclick="playSong('song1',this)">▶ Play</button>
+<audio id="song1" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio>
 </div>
 
 <div class="song">
-  <span><h3>Salaam-E-Ishq ❤️</h3></span>
-  <button onclick="playSong('song2',this)">▶ Play</button>
-  <audio id="song2" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio>
+<span><h3>Salaam-E-Ishq ❤️</h3></span>
+<button onclick="playSong('song2',this)">▶ Play</button>
+<audio id="song2" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio>
 </div>
 
 <div class="song">
-  <span><h3>Dildara ❤️</h3></span>
-  <button onclick="playSong('song3',this)">▶ Play</button>
-  <audio id="song3" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio>
+<span><h3>Dildara ❤️</h3></span>
+<button onclick="playSong('song3',this)">▶ Play</button>
+<audio id="song3" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio>
 </div>
 
 <div class="song">
-  <span><h3>Laung Da Lashkara ❤️</h3></span>
-  <button onclick="playSong('song4',this)">▶ Play</button>
-  <audio id="song4" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio>
+<span><h3>Laung Da Lashkara ❤️</h3></span>
+<button onclick="playSong('song4',this)">▶ Play</button>
+<audio id="song4" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio>
 </div>
 
 </div>
@@ -710,9 +695,6 @@ Everything in this section can be edited ❤️
 </div>
 
 </section>
-
-
-<!-- LITTLE DETAILS -->
 
 <section id="details" class="screen hidden">
 
@@ -802,9 +784,6 @@ Everything in this section can be edited ❤️
 
 </section>
 
-
-<!-- PEOPLE -->
-
 <section id="people" class="screen hidden">
 
 <div class="content">
@@ -825,87 +804,27 @@ Everything in this section can be edited ❤️
 
 <div class="people-grid">
 
-<div class="person">
-<strong>Mashal</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Muneeba</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Ryan</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Bilal</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Maheen</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Moiz</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Eman</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Deeja</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Kami</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Muzammil</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Mohid</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-    
-<div class="person">
-<strong>Aiza</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Shayan</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Meerab</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
-
-<div class="person">
-<strong>Person 15</strong>
-<p contenteditable="true">Write their message here...</p>
-</div>
+<div class="person"><strong>Mashal</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Muneeba</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Ryan</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Bilal</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Maheen</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Moiz</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Eman</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Deeja</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Kami</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Muzammil</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Mohid</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Aiza</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Shayan</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Meerab</strong><p contenteditable="true">Write their message here...</p></div>
+<div class="person"><strong>Person 15</strong><p contenteditable="true">Write their message here...</p></div>
 
 </div>
 
 </div>
 
 </section>
-
 
 <script>
 
@@ -987,17 +906,10 @@ function startCountdown(){
             (distance%(1000*60))/1000
         );
 
-        document.getElementById("days").innerText =
-        days;
-
-        document.getElementById("hours").innerText =
-        String(hours).padStart(2,"0");
-
-        document.getElementById("minutes").innerText =
-        String(minutes).padStart(2,"0");
-
-        document.getElementById("seconds").innerText =
-        String(seconds).padStart(2,"0");
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = String(hours).padStart(2,"0");
+        document.getElementById("minutes").innerText = String(minutes).padStart(2,"0");
+        document.getElementById("seconds").innerText = String(seconds).padStart(2,"0");
 
     }
 
@@ -1049,7 +961,7 @@ function openSection(id){
 
     document
     .getElementById(id)
-    .classList.remove("hidden")
+    .classList.remove("hidden");
 
 }
 
@@ -1115,6 +1027,57 @@ function toggleAudio(id,button){
     }
 
 }
+
+
+/* SAVE EDITS */
+
+function saveEdits(){
+
+    const editableElements =
+    document.querySelectorAll('[contenteditable="true"]');
+
+    editableElements.forEach((element,index)=>{
+
+        localStorage.setItem(
+            "shanze_edit_" + index,
+            element.innerHTML
+        );
+
+    });
+
+    const message =
+    document.getElementById("saveMessage");
+
+    message.style.display = "block";
+
+    setTimeout(()=>{
+        message.style.display = "none";
+    },2000);
+
+}
+
+
+/* LOAD SAVED EDITS */
+
+function loadEdits(){
+
+    const editableElements =
+    document.querySelectorAll('[contenteditable="true"]');
+
+    editableElements.forEach((element,index)=>{
+
+        const saved =
+        localStorage.getItem("shanze_edit_" + index);
+
+        if(saved !== null){
+            element.innerHTML = saved;
+        }
+
+    });
+
+}
+
+window.addEventListener("load",loadEdits);
 
 </script>
 
