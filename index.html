@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For Shanze ❤️</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,1094 +10,362 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:"Cormorant Garamond",serif;
-    background:#fff8df;
-    color:#5a451b;
-    min-height:100vh;
-    overflow-x:hidden;
-}
-
-button{
-    font-family:inherit;
-    cursor:pointer;
-}
-
-.hidden{
-    display:none !important;
-}
-
-.screen{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:25px;
-    text-align:center;
-    position:relative;
-}
-
-.petal{
-    position:fixed;
-    top:-30px;
-    font-size:20px;
-    opacity:.65;
-    animation:fall linear infinite;
-    pointer-events:none;
-    z-index:1;
-}
-
-@keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(360deg);
-    }
-}
-
-h1{
-    font-family:"Playfair Display",serif;
-    font-size:44px;
-    margin-bottom:15px;
-}
-
-.subtitle{
-    font-size:22px;
-    margin-bottom:25px;
-}
-
-.main-btn{
-    margin-top:15px;
-    border:none;
-    padding:14px 28px;
-    border-radius:30px;
-    background:#d9a928;
-    color:white;
-    font-size:19px;
-    box-shadow:0 8px 20px rgba(150,110,20,.2);
-    transition:.25s;
-}
-
-.main-btn:hover{
-    transform:translateY(-2px);
-}
-
-.back{
-    background:#6c5425;
-    margin-bottom:25px;
-}
-
-.password-box{
-    max-width:450px;
-    width:100%;
-    background:rgba(255,255,255,.75);
-    padding:45px 30px;
-    border-radius:30px;
-    box-shadow:0 15px 50px rgba(116,88,20,.15);
-}
-
-.sunflower{
-    font-size:75px;
-    margin-bottom:15px;
-}
-
-input{
-    width:100%;
-    padding:15px 18px;
-    border:1px solid #dfc97b;
-    border-radius:15px;
-    outline:none;
-    font-size:18px;
-    text-align:center;
-    background:#fffdf3;
-}
-
-.error{
-    color:#b84c4c;
-    margin-top:12px;
-    font-size:17px;
-}
-
-.countdown-box{
-    max-width:850px;
-}
-
-.countdown-box h1{
-    font-size:55px;
-}
-
-.countdown{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin:30px 0;
-}
-
-.time{
-    background:white;
-    min-width:120px;
-    padding:20px 15px;
-    border-radius:22px;
-    box-shadow:0 10px 30px rgba(100,70,10,.12);
-}
-
-.time span{
-    display:block;
-    font-size:42px;
-    font-weight:600;
-}
-
-.time small{
-    font-size:17px;
-}
-
-.enter-btn{
-    background:#6c5425;
-}
-
-.birthday-box{
-    animation:fadeIn 1s ease;
-}
-
-.birthday-box h1{
-    font-size:65px;
-}
-
-.heart{
-    font-size:65px;
-    margin:15px;
-    animation:pulse 1.4s infinite;
-}
-
-@keyframes pulse{
-    50%{
-        transform:scale(1.15);
-    }
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.menu{
-    width:100%;
-    max-width:900px;
-    padding:30px 15px;
-}
-
-.menu-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.menu-card{
-    background:white;
-    border:none;
-    border-radius:25px;
-    padding:28px 20px;
-    font-size:24px;
-    color:#5a451b;
-    box-shadow:0 10px 30px rgba(100,70,10,.1);
-    transition:.3s;
-}
-
-.menu-card:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(100,70,10,.16);
-}
-
-.panda{
-    font-size:48px;
-    display:block;
-    margin-bottom:8px;
-}
-
-.content{
-    width:100%;
-    max-width:950px;
-    padding:40px 15px;
-}
-
-.card{
-    background:white;
-    border-radius:25px;
-    padding:25px;
-    margin-bottom:20px;
-    box-shadow:0 10px 30px rgba(100,70,10,.1);
-}
-
-.letter{
-    font-size:22px;
-    line-height:1.7;
-    text-align:left;
-    min-height:300px;
-    outline:none;
-}
-
-.memory-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:20px;
-}
-
-.memory img{
-    width:100%;
-    height:330px;
-    object-fit:contain;
-    border-radius:18px;
-    background:#f4e8b8;
-    margin-bottom:10px;
-}
-
-.editable{
-    margin-top:12px;
-    padding:10px;
-    border-radius:10px;
-    background:#fffaf0;
-    outline:none;
-    font-size:19px;
-}
-
-.song{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:18px;
-    border-radius:18px;
-    background:#fffaf0;
-    margin-bottom:12px;
-    font-size:21px;
-}
-
-.song button{
-    border:none;
-    background:#d9a928;
-    color:white;
-    padding:9px 17px;
-    border-radius:20px;
-    font-size:16px;
-}
-
-.details-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-}
-
-.detail-card{
-    background:#fffaf0;
-    padding:25px 20px;
-    border-radius:22px;
-    text-align:left;
-    box-shadow:0 5px 18px rgba(100,70,10,.06);
-}
-
-.detail-icon{
-    font-size:38px;
-    margin-bottom:8px;
-}
-
-.detail-card h3{
-    font-size:24px;
-    margin-bottom:8px;
-}
-
-.detail-card p{
-    font-size:19px;
-    line-height:1.5;
-    outline:none;
-}
-
-.people-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.person{
-    background:#fffaf0;
-    padding:20px;
-    border-radius:20px;
-    text-align:left;
-}
-
-.person strong{
-    font-size:21px;
-}
-
-.person p{
-    margin-top:8px;
-    font-size:19px;
-    line-height:1.4;
-    outline:none;
-}
-
-/* SAVE BUTTON */
-
-.save-btn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    z-index:999;
-    border:none;
-    padding:13px 22px;
-    border-radius:30px;
-    background:#d9a928;
-    color:white;
-    font-family:inherit;
-    font-size:18px;
-    box-shadow:0 8px 20px rgba(150,110,20,.25);
-}
-
-.save-message{
-    position:fixed;
-    bottom:70px;
-    right:20px;
-    z-index:999;
-    background:white;
-    padding:10px 16px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.12);
-    display:none;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Cormorant Garamond",serif;background:#fff8df;color:#5a451b;min-height:100vh;overflow-x:hidden}
+button{font-family:inherit;cursor:pointer}
+.hidden{display:none!important}
+.screen{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:25px;text-align:center;position:relative}
+.petal{position:fixed;top:-30px;font-size:20px;opacity:.65;animation:fall linear infinite;pointer-events:none;z-index:1}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+h1{font-family:"Playfair Display",serif;font-size:44px;margin-bottom:15px}
+.subtitle{font-size:22px;margin-bottom:25px}
+.main-btn{margin-top:15px;border:none;padding:14px 28px;border-radius:30px;background:#d9a928;color:white;font-size:19px;box-shadow:0 8px 20px #966e1433;transition:.25s}
+.main-btn:hover{transform:translateY(-2px)}
+.back{background:#6c5425;margin-bottom:25px}
+.password-box{max-width:450px;width:100%;background:#ffffffbf;padding:45px 30px;border-radius:30px;box-shadow:0 15px 50px #74581426}
+.sunflower{font-size:75px;margin-bottom:15px}
+input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;outline:none;font-size:18px;text-align:center;background:#fffdf3}
+.error{color:#b84c4c;margin-top:12px;font-size:17px}
+.countdown-box{max-width:850px}
+.countdown-box h1{font-size:55px}
+.countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px 0}
+.time{background:white;min-width:120px;padding:20px 15px;border-radius:22px;box-shadow:0 10px 30px #64460a1f}
+.time span{display:block;font-size:42px;font-weight:600}
+.time small{font-size:17px}
+.enter-btn{background:#6c5425}
+.birthday-box{animation:fadeIn 1s ease}
+.birthday-box h1{font-size:65px}
+.heart{font-size:65px;margin:15px;animation:pulse 1.4s infinite}
+@keyframes pulse{50%{transform:scale(1.15)}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.menu{width:100%;max-width:900px;padding:30px 15px}
+.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.menu-card{background:white;border:none;border-radius:25px;padding:28px 20px;font-size:24px;color:#5a451b;box-shadow:0 10px 30px #64460a1a;transition:.3s}
+.menu-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #64460a29}
+.panda{font-size:48px;display:block;margin-bottom:8px}
+.content{width:100%;max-width:950px;padding:40px 15px}
+.card{background:white;border-radius:25px;padding:25px;margin-bottom:20px;box-shadow:0 10px 30px #64460a1a}
+.letter{font-size:22px;line-height:1.7;text-align:left;min-height:300px;outline:none;white-space:pre-wrap}
+.memory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.memory img{width:100%;height:330px;object-fit:contain;border-radius:18px;background:#f4e8b8;margin-bottom:10px}
+.editable{margin-top:12px;padding:10px;border-radius:10px;background:#fffaf0;outline:none;font-size:19px;white-space:pre-wrap}
+.song{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px;border-radius:18px;background:#fffaf0;margin-bottom:12px;font-size:21px}
+.song button{border:none;background:#d9a928;color:white;padding:9px 17px;border-radius:20px;font-size:16px}
+.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.detail-card{background:#fffaf0;padding:25px 20px;border-radius:22px;text-align:left;box-shadow:0 5px 18px #64460a0f}
+.detail-icon{font-size:38px;margin-bottom:8px}
+.detail-card h3{font-size:24px;margin-bottom:8px}
+.detail-card p{font-size:19px;line-height:1.5;outline:none;white-space:pre-wrap}
+.people-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.person{background:#fffaf0;padding:20px;border-radius:20px;text-align:left}
+.person strong{font-size:21px}
+.person p{margin-top:8px;font-size:19px;line-height:1.4;outline:none;white-space:pre-wrap}
+.sunflower-btn{font-size:150px;cursor:pointer;display:inline-block;transition:transform .3s}
+.sunflower-btn:hover{transform:scale(1.08)}
+.click-text{font-size:18px;margin-top:10px}
 @media(max-width:650px){
-
-    h1{
-        font-size:34px;
-    }
-
-    .countdown-box h1{
-        font-size:40px;
-    }
-
-    .birthday-box h1{
-        font-size:43px;
-    }
-
-    .time{
-        min-width:85px;
-        padding:15px 10px;
-    }
-
-    .time span{
-        font-size:30px;
-    }
-
-    .menu-grid,
-    .memory-grid,
-    .details-grid,
-    .people-grid{
-        grid-template-columns:1fr;
-    }
-
-    .menu-card{
-        font-size:22px;
-    }
-
-    .memory img{
-        height:240px;
-    }
+ h1{font-size:34px}
+ .countdown-box h1{font-size:40px}
+ .birthday-box h1{font-size:43px}
+ .time{min-width:85px;padding:15px 10px}
+ .time span{font-size:30px}
+ .menu-grid,.memory-grid,.details-grid,.people-grid{grid-template-columns:1fr}
+ .menu-card{font-size:22px}
+ .memory img{height:240px}
 }
-
-/* SUNFLOWER BUTTON */
-
-.sunflower-btn{
-    font-size:150px;
-    cursor:pointer;
-    display:inline-block;
-    transition:transform 0.3s ease;
-}
-
-.sunflower-btn:hover{
-    transform:scale(1.08);
-}
-
-.click-text{
-    font-size:18px;
-    margin-top:10px;
-}
-
 </style>
 </head>
 
 <body>
 
-<button class="save-btn" onclick="saveEdits()">Save Changes ❤️</button>
-<div id="saveMessage" class="save-message">Saved ❤️</div>
-
-<div class="petal" style="left:8%;animation-duration:8s;">🌼</div>
-<div class="petal" style="left:25%;animation-duration:11s;">🌸</div>
-<div class="petal" style="left:45%;animation-duration:9s;">🌼</div>
-<div class="petal" style="left:68%;animation-duration:12s;">🌸</div>
-<div class="petal" style="left:88%;animation-duration:10s;">🌼</div>
+<div class="petal" style="left:8%;animation-duration:8s">🌼</div>
+<div class="petal" style="left:25%;animation-duration:11s">🌸</div>
+<div class="petal" style="left:45%;animation-duration:9s">🌼</div>
+<div class="petal" style="left:68%;animation-duration:12s">🌸</div>
+<div class="petal" style="left:88%;animation-duration:10s">🌼</div>
 
 <section id="passwordScreen" class="screen">
-
-<div class="password-box">
-
-<div class="sunflower">🌻</div>
-
-<h1>For Shanze</h1>
-
-<p class="subtitle">
-A little something made just for you ❤️
-</p>
-
-<input
-id="passwordInput"
-type="password"
-placeholder="Enter the password..."
->
-
-<button class="main-btn" onclick="checkPassword()">
-Open ❤️
-</button>
-
-<p id="passwordError" class="error"></p>
-
-</div>
-
+ <div class="password-box">
+  <div class="sunflower">🌻</div>
+  <h1>For Shanze</h1>
+  <p class="subtitle">A little something made just for you ❤️</p>
+  <input id="passwordInput" type="password" placeholder="Enter the password...">
+  <button class="main-btn" onclick="checkPassword()">Open ❤️</button>
+  <p id="passwordError" class="error"></p>
+ </div>
 </section>
 
 <section id="countdownScreen" class="screen hidden">
-
-<div class="countdown-box">
-
-<div class="sunflower">🌻</div>
-
-<h1>Your Birthday Is Coming...</h1>
-
-<p class="subtitle">
-November 6, 2026 ❤️
-</p>
-
-<div class="countdown">
-
-<div class="time">
-<span id="days">0</span>
-<small>Days</small>
-</div>
-
-<div class="time">
-<span id="hours">0</span>
-<small>Hours</small>
-</div>
-
-<div class="time">
-<span id="minutes">0</span>
-<small>Minutes</small>
-</div>
-
-<div class="time">
-<span id="seconds">0</span>
-<small>Seconds</small>
-</div>
-
-</div>
-
-<button class="main-btn enter-btn" onclick="showBirthday()">
-Enter My Surprise ❤️
-</button>
-
-</div>
-
+ <div class="countdown-box">
+  <div class="sunflower">🌻</div>
+  <h1>Your Birthday Is Coming...</h1>
+  <p class="subtitle">November 6, 2026 ❤️</p>
+  <div class="countdown">
+   <div class="time"><span id="days">0</span><small>Days</small></div>
+   <div class="time"><span id="hours">0</span><small>Hours</small></div>
+   <div class="time"><span id="minutes">0</span><small>Minutes</small></div>
+   <div class="time"><span id="seconds">0</span><small>Seconds</small></div>
+  </div>
+  <button class="main-btn enter-btn" onclick="showBirthday()">Enter My Surprise ❤️</button>
+ </div>
 </section>
 
 <section id="birthdayScreen" class="screen hidden">
-
-<div class="birthday-box">
-
-<div class="heart">❤️</div>
-
-<h1>HAPPY BIRTHDAY BABY</h1>
-
-<p class="subtitle">
-I HAVE A SURPRISE FOR YOU...
-</p>
-
-<div class="sunflower-btn" onclick="showMenu()">
-  🌻
-</div>
-
-<p class="click-text">click the sunflower, baby...</p>
-
-</div>
-
+ <div class="birthday-box">
+  <div class="heart">❤️</div>
+  <h1>HAPPY BIRTHDAY BABY</h1>
+  <p class="subtitle">I HAVE A SURPRISE FOR YOU...</p>
+  <div class="sunflower-btn" onclick="showMenu()">🌻</div>
+  <p class="click-text">click the sunflower, baby...</p>
+ </div>
 </section>
 
 <section id="menuScreen" class="screen hidden">
+ <div class="menu">
+  <h1>For My Shanze ❤️</h1>
+  <button class="main-btn" id="publishBtn" onclick="publishForVisitors()">Prepare Website for Visitors ❤️</button>
+  <p class="click-text" id="publishHelp">After editing your text, click this button. Then upload the downloaded index.html to GitHub.</p>
 
-<div class="menu">
-
-<h1>For My Shanze ❤️</h1>
-
-<div class="menu-grid">
-
-<button class="menu-card" onclick="openSection('letter')">
-<span class="panda">🐼</span>
-A Letter From Me 💌
-</button>
-
-<button class="menu-card" onclick="openSection('memories')">
-<span class="panda">🐼</span>
-Our Memories 📸
-</button>
-
-<button class="menu-card" onclick="openSection('songs')">
-<span class="panda">🐼</span>
-Songs That Remind Me Of Her 🎵
-</button>
-
-<button class="menu-card" onclick="openSection('details')">
-<span class="panda">🐼</span>
-Little Details About Shanze 🌻
-</button>
-
-<button class="menu-card" onclick="openSection('people')">
-<span class="panda">🐼</span>
-Words From Her People 🥹
-</button>
-
-</div>
-
-</div>
-
+  <div class="menu-grid">
+   <button class="menu-card" onclick="openSection('letter')"><span class="panda">🐼</span>A Letter From Me 💌</button>
+   <button class="menu-card" onclick="openSection('memories')"><span class="panda">🐼</span>Our Memories 📸</button>
+   <button class="menu-card" onclick="openSection('songs')"><span class="panda">🐼</span>Songs That Remind Me Of Her 🎵</button>
+   <button class="menu-card" onclick="openSection('details')"><span class="panda">🐼</span>Little Details About Shanze 🌻</button>
+   <button class="menu-card" onclick="openSection('people')"><span class="panda">🐼</span>Words From Her People 🥹</button>
+  </div>
+ </div>
 </section>
 
 <section id="letter" class="screen hidden">
-
-<div class="content">
-
-<button class="main-btn back" onclick="showMenu()">← Back</button>
-
-<h1>A Letter From Me 💌</h1>
-
-<div class="card">
-
-<div class="letter" contenteditable="true">
-
-My baby,
+ <div class="content">
+  <button class="main-btn back" onclick="showMenu()">← Back</button>
+  <h1>A Letter From Me 💌</h1>
+  <div class="card">
+   <div class="letter" contenteditable="true">My baby,
 
 Write your letter here...
 
-Everything in this section can be edited ❤️
-
-</div>
-
-</div>
-
-</div>
-
+Everything in this section can be edited ❤️</div>
+  </div>
+ </div>
 </section>
 
 <section id="memories" class="screen hidden">
+ <div class="content">
+  <button class="main-btn back" onclick="showMenu()">← Back</button>
+  <h1>Our Memories 📸</h1>
+  <div class="card">
+   <button class="main-btn" onclick="toggleAudio('memoryMusic',this)">▶ Play Our Memory Song</button>
+   <audio id="memoryMusic" src="Stephen Sanchez - Until I Found You (Lyrics).mp3"></audio>
+  </div>
 
-<div class="content">
-
-<button class="main-btn back" onclick="showMenu()">← Back</button>
-
-<h1>Our Memories 📸</h1>
-
-<div class="card">
-
-<button class="main-btn" onclick="toggleAudio('memoryMusic',this)">
-▶ Play Our Memory Song
-</button>
-
-<audio id="memoryMusic" src="Stephen Sanchez - Until I Found You (Lyrics).mp3"></audio>
-
-</div>
-
-<div class="memory-grid">
-
-<div class="card memory">
-<img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our Memory 1">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-<div class="card memory">
-<img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our Memory 2">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-<div class="card memory">
-<img src="3.jpeg" alt="Our Memory 3">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-<div class="card memory">
-<img src="4.jpeg" alt="Our Memory 4">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-<div class="card memory">
-<img src="5.jpeg" alt="Our Memory 5">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-<div class="card memory">
-<img src="6.jpeg" alt="Our Memory 6">
-<div class="editable" contenteditable="true">
-Write something about this memory...
-</div>
-</div>
-
-</div>
-
-</div>
-
+  <div class="memory-grid">
+   <div class="card memory"><img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our Memory 1"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+   <div class="card memory"><img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our Memory 2"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+   <div class="card memory"><img src="3.jpeg" alt="Our Memory 3"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+   <div class="card memory"><img src="4.jpeg" alt="Our Memory 4"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+   <div class="card memory"><img src="5.jpeg" alt="Our Memory 5"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+   <div class="card memory"><img src="6.jpeg" alt="Our Memory 6"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
+  </div>
+ </div>
 </section>
 
 <section id="songs" class="screen hidden">
-
-<div class="content">
-
-<button class="main-btn back" onclick="showMenu()">← Back</button>
-
-<h1>Songs That Remind Me Of Her 🎵</h1>
-
-<div class="card">
-
-<div class="song">
-<span><h3>Birds of a Feather ❤️</h3></span>
-<button onclick="playSong('song1',this)">▶ Play</button>
-<audio id="song1" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio>
-</div>
-
-<div class="song">
-<span><h3>Salaam-E-Ishq ❤️</h3></span>
-<button onclick="playSong('song2',this)">▶ Play</button>
-<audio id="song2" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio>
-</div>
-
-<div class="song">
-<span><h3>Dildara ❤️</h3></span>
-<button onclick="playSong('song3',this)">▶ Play</button>
-<audio id="song3" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio>
-</div>
-
-<div class="song">
-<span><h3>Laung Da Lashkara ❤️</h3></span>
-<button onclick="playSong('song4',this)">▶ Play</button>
-<audio id="song4" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio>
-</div>
-
-</div>
-
-</div>
-
+ <div class="content">
+  <button class="main-btn back" onclick="showMenu()">← Back</button>
+  <h1>Songs That Remind Me Of Her 🎵</h1>
+  <div class="card">
+   <div class="song"><h3>Birds of a Feather ❤️</h3><button onclick="playSong('song1',this)">▶ Play</button><audio id="song1" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio></div>
+   <div class="song"><h3>Salaam-E-Ishq ❤️</h3><button onclick="playSong('song2',this)">▶ Play</button><audio id="song2" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio></div>
+   <div class="song"><h3>Dildara ❤️</h3><button onclick="playSong('song3',this)">▶ Play</button><audio id="song3" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio></div>
+   <div class="song"><h3>Laung Da Lashkara ❤️</h3><button onclick="playSong('song4',this)">▶ Play</button><audio id="song4" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio></div>
+  </div>
+ </div>
 </section>
 
 <section id="details" class="screen hidden">
-
-<div class="content">
-
-<button class="main-btn back" onclick="showMenu()">← Back</button>
-
-<h1>Little Details About Shanze 🌻</h1>
-
-<div class="details-grid">
-
-<div class="detail-card">
-<div class="detail-icon">🎨</div>
-<h3>Her Favourite Colour</h3>
-<p contenteditable="true">Write her favourite colour...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🎬</div>
-<h3>Her Favourite Movie</h3>
-<p contenteditable="true">Write her favourite movie...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🌻</div>
-<h3>Her Favourite Flower</h3>
-<p contenteditable="true">Write her favourite flower...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🎵</div>
-<h3>Her Favourite Song</h3>
-<p contenteditable="true">Write her favourite song...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">😂</div>
-<h3>Things She Likes To Say</h3>
-<p contenteditable="true">Write the things she always says...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">📍</div>
-<h3>Her Favourite Place</h3>
-<p contenteditable="true">Write her favourite place...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">❤️</div>
-<h3>What I Love About Her</h3>
-<p contenteditable="true">Write what you love about her...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🥹</div>
-<h3>Little Habits</h3>
-<p contenteditable="true">Write her cute little habits...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🐼</div>
-<h3>Her Favourite Animal</h3>
-<p contenteditable="true">Write her favourite animal...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">💕</div>
-<h3>Her Favourite Thing</h3>
-<p contenteditable="true">Write her favourite thing...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">✨</div>
-<h3>Things She Does</h3>
-<p contenteditable="true">Write the cute/funny things she does...</p>
-</div>
-
-<div class="detail-card">
-<div class="detail-icon">🌸</div>
-<h3>Cute Facts About Her</h3>
-<p contenteditable="true">Write some cute facts about Shanze...</p>
-</div>
-
-</div>
-
-</div>
-
+ <div class="content">
+  <button class="main-btn back" onclick="showMenu()">← Back</button>
+  <h1>Little Details About Shanze 🌻</h1>
+  <div class="details-grid">
+   <div class="detail-card"><div class="detail-icon">🎨</div><h3>Her Favourite Colour</h3><p contenteditable="true">Write her favourite colour...</p></div>
+   <div class="detail-card"><div class="detail-icon">🎬</div><h3>Her Favourite Movie</h3><p contenteditable="true">Write her favourite movie...</p></div>
+   <div class="detail-card"><div class="detail-icon">🌻</div><h3>Her Favourite Flower</h3><p contenteditable="true">Write her favourite flower...</p></div>
+   <div class="detail-card"><div class="detail-icon">🎵</div><h3>Her Favourite Song</h3><p contenteditable="true">Write her favourite song...</p></div>
+   <div class="detail-card"><div class="detail-icon">😂</div><h3>Things She Likes To Say</h3><p contenteditable="true">Write the things she always says...</p></div>
+   <div class="detail-card"><div class="detail-icon">📍</div><h3>Her Favourite Place</h3><p contenteditable="true">Write her favourite place...</p></div>
+   <div class="detail-card"><div class="detail-icon">❤️</div><h3>What I Love About Her</h3><p contenteditable="true">Write what you love about her...</p></div>
+   <div class="detail-card"><div class="detail-icon">🥹</div><h3>Little Habits</h3><p contenteditable="true">Write her cute little habits...</p></div>
+   <div class="detail-card"><div class="detail-icon">🐼</div><h3>Her Favourite Animal</h3><p contenteditable="true">Write her favourite animal...</p></div>
+   <div class="detail-card"><div class="detail-icon">💕</div><h3>Her Favourite Thing</h3><p contenteditable="true">Write her favourite thing...</p></div>
+   <div class="detail-card"><div class="detail-icon">✨</div><h3>Things She Does</h3><p contenteditable="true">Write the cute/funny things she does...</p></div>
+   <div class="detail-card"><div class="detail-icon">🌸</div><h3>Cute Facts About Her</h3><p contenteditable="true">Write some cute facts about Shanze...</p></div>
+  </div>
+ </div>
 </section>
 
 <section id="people" class="screen hidden">
-
-<div class="content">
-
-<button class="main-btn back" onclick="showMenu()">← Back</button>
-
-<h1>Words From Her People 🥹</h1>
-
-<div class="card">
-
-<button class="main-btn" onclick="toggleAudio('friendsMusic',this)">
-▶ Play Their Song
-</button>
-
-<audio id="friendsMusic" src="Ed Sheeran - Photograph (Official Music Video).mp3"></audio>
-
-</div>
-
-<div class="people-grid">
-
-<div class="person"><strong>Mashal</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Muneeba</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Ryan</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Bilal</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Raahim</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Moiz</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Eman</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Deeja</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Kami</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Muzammil</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Mohid</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Aiza</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Shayan</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Meerab</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>emaan jay</strong><p contenteditable="true">Write their message here...</p></div>
-<div class="person"><strong>Mehreen</strong><p contenteditable="true">Write their message here...</p></div>
-
-</div>
-
-</div>
-
+ <div class="content">
+  <button class="main-btn back" onclick="showMenu()">← Back</button>
+  <h1>Words From Her People 🥹</h1>
+  <div class="card">
+   <button class="main-btn" onclick="toggleAudio('friendsMusic',this)">▶ Play Their Song</button>
+   <audio id="friendsMusic" src="Ed Sheeran - Photograph (Official Music Video).mp3"></audio>
+  </div>
+  <div class="people-grid">
+   <div class="person"><strong>Mashal</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Muneeba</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Ryan</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Bilal</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Raahim</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Moiz</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Eman</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Deeja</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Kami</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Muzammil</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Mohid</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Aiza</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Shayan</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Meerab</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>emaan jay</strong><p contenteditable="true">Write their message here...</p></div>
+   <div class="person"><strong>Mehreen</strong><p contenteditable="true">Write their message here...</p></div>
+  </div>
+ </div>
 </section>
 
 <script>
-
 const PASSWORD = "iloveyou1000";
-
-const birthdayDate =
-new Date("2026-11-06T00:00:00").getTime();
-
+const birthdayDate = new Date("2026-11-06T00:00:00").getTime();
 let countdownTimer;
 let currentAudio = null;
 
-
-/* PASSWORD */
-
 function checkPassword(){
-
-    const input =
-    document.getElementById("passwordInput").value;
-
-    if(input === PASSWORD){
-
-        document
-        .getElementById("passwordScreen")
-        .classList.add("hidden");
-
-        document
-        .getElementById("countdownScreen")
-        .classList.remove("hidden");
-
-        startCountdown();
-
-    }else{
-
-        document
-        .getElementById("passwordError")
-        .innerText =
-        "Hmm... that's not it baby 😂❤️";
-
-    }
-
+ const input = document.getElementById("passwordInput").value;
+ if(input === PASSWORD){
+  document.getElementById("passwordScreen").classList.add("hidden");
+  document.getElementById("countdownScreen").classList.remove("hidden");
+  startCountdown();
+ }else{
+  document.getElementById("passwordError").innerText = "Hmm... that's not it baby 😂❤️";
+ }
 }
-
-
-/* COUNTDOWN */
 
 function startCountdown(){
-
-    function updateCountdown(){
-
-        const now =
-        new Date().getTime();
-
-        const distance =
-        birthdayDate - now;
-
-        if(distance <= 0){
-
-            clearInterval(countdownTimer);
-            showBirthday();
-            return;
-
-        }
-
-        const days =
-        Math.floor(distance/(1000*60*60*24));
-
-        const hours =
-        Math.floor(
-            (distance%(1000*60*60*24))/(1000*60*60)
-        );
-
-        const minutes =
-        Math.floor(
-            (distance%(1000*60*60))/(1000*60)
-        );
-
-        const seconds =
-        Math.floor(
-            (distance%(1000*60))/1000
-        );
-
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = String(hours).padStart(2,"0");
-        document.getElementById("minutes").innerText = String(minutes).padStart(2,"0");
-        document.getElementById("seconds").innerText = String(seconds).padStart(2,"0");
-
-    }
-
-    updateCountdown();
-
-    countdownTimer =
-    setInterval(updateCountdown,1000);
-
+ function updateCountdown(){
+  const distance = birthdayDate - new Date().getTime();
+  if(distance <= 0){
+   clearInterval(countdownTimer);
+   showBirthday();
+   return;
+  }
+  document.getElementById("days").innerText = Math.floor(distance/(1000*60*60*24));
+  document.getElementById("hours").innerText = String(Math.floor((distance%(1000*60*60*24))/(1000*60*60))).padStart(2,"0");
+  document.getElementById("minutes").innerText = String(Math.floor((distance%(1000*60*60))/(1000*60))).padStart(2,"0");
+  document.getElementById("seconds").innerText = String(Math.floor((distance%(1000*60))/1000)).padStart(2,"0");
+ }
+ updateCountdown();
+ countdownTimer = setInterval(updateCountdown,1000);
 }
-
-
-/* NAVIGATION */
 
 function hideAll(){
-
-    document
-    .querySelectorAll(".screen")
-    .forEach(screen=>{
-        screen.classList.add("hidden");
-    });
-
+ document.querySelectorAll(".screen").forEach(screen=>screen.classList.add("hidden"));
 }
-
 function showBirthday(){
-
-    clearInterval(countdownTimer);
-
-    hideAll();
-
-    document
-    .getElementById("birthdayScreen")
-    .classList.remove("hidden");
-
+ clearInterval(countdownTimer);
+ hideAll();
+ document.getElementById("birthdayScreen").classList.remove("hidden");
 }
-
 function showMenu(){
-
-    hideAll();
-
-    document
-    .getElementById("menuScreen")
-    .classList.remove("hidden");
-
+ hideAll();
+ document.getElementById("menuScreen").classList.remove("hidden");
 }
-
 function openSection(id){
-
-    hideAll();
-
-    document
-    .getElementById(id)
-    .classList.remove("hidden");
-
+ hideAll();
+ document.getElementById(id).classList.remove("hidden");
 }
-
-
-/* AUDIO */
 
 function playSong(id,button){
-
-    const audio =
-    document.getElementById(id);
-
-    if(currentAudio && currentAudio !== audio){
-
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-
-    }
-
-    if(audio.paused){
-
-        audio.play();
-
-        button.innerText = "⏸ Pause";
-
-        currentAudio = audio;
-
-    }else{
-
-        audio.pause();
-
-        button.innerText = "▶ Play";
-
-    }
-
+ const audio = document.getElementById(id);
+ if(currentAudio && currentAudio !== audio){
+  currentAudio.pause();
+  currentAudio.currentTime = 0;
+ }
+ if(audio.paused){
+  audio.play();
+  button.innerText = "⏸ Pause";
+  currentAudio = audio;
+ }else{
+  audio.pause();
+  button.innerText = "▶ Play";
+ }
 }
-
 function toggleAudio(id,button){
-
-    const audio =
-    document.getElementById(id);
-
-    if(currentAudio && currentAudio !== audio){
-
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-
-    }
-
-    if(audio.paused){
-
-        audio.play();
-
-        button.innerText = "⏸ Pause";
-
-        currentAudio = audio;
-
-    }else{
-
-        audio.pause();
-
-        button.innerText = "▶ Play";
-
-    }
-
+ const audio = document.getElementById(id);
+ if(currentAudio && currentAudio !== audio){
+  currentAudio.pause();
+  currentAudio.currentTime = 0;
+ }
+ if(audio.paused){
+  audio.play();
+  button.innerText = "⏸ Pause";
+  currentAudio = audio;
+ }else{
+  audio.pause();
+  button.innerText = "▶ Play";
+ }
 }
 
-
-/* SAVE EDITS */
-
+/* Automatically save edits in this browser */
 function saveEdits(){
-
-    const editableElements =
-    document.querySelectorAll('[contenteditable="true"]');
-
-    editableElements.forEach((element,index)=>{
-
-        localStorage.setItem(
-            "shanze_edit_" + index,
-            element.innerHTML
-        );
-
-    });
-
-    const message =
-    document.getElementById("saveMessage");
-
-    message.style.display = "block";
-
-    setTimeout(()=>{
-        message.style.display = "none";
-    },2000);
-
+ document.querySelectorAll('[contenteditable="true"]').forEach((element,index)=>{
+  localStorage.setItem("shanze_edit_"+index,element.innerHTML);
+ });
 }
 
-
-/* LOAD SAVED EDITS */
-
+/* Restore edits previously saved in this browser */
 function loadEdits(){
-
-    const editableElements =
-    document.querySelectorAll('[contenteditable="true"]');
-
-    editableElements.forEach((element,index)=>{
-
-        const saved =
-        localStorage.getItem("shanze_edit_" + index);
-
-        if(saved !== null){
-            element.innerHTML = saved;
-        }
-
-    });
-
+ document.querySelectorAll('[contenteditable="true"]').forEach((element,index)=>{
+  const saved = localStorage.getItem("shanze_edit_"+index);
+  if(saved !== null) element.innerHTML = saved;
+ });
 }
 
+document.addEventListener("input",function(event){
+ if(event.target && event.target.matches('[contenteditable="true"]')) saveEdits();
+});
 window.addEventListener("load",loadEdits);
 
+/* Download a visitor-ready HTML containing all the current text */
+function publishForVisitors(){
+ saveEdits();
+
+ const copy = document.documentElement.cloneNode(true);
+ const originalEditable = document.querySelectorAll('[contenteditable="true"]');
+ const copiedEditable = copy.querySelectorAll('[contenteditable="true"]');
+
+ originalEditable.forEach((element,index)=>{
+  if(copiedEditable[index]){
+   copiedEditable[index].innerHTML = element.innerHTML;
+   copiedEditable[index].removeAttribute("contenteditable");
+  }
+ });
+
+ copy.querySelector("#publishBtn")?.remove();
+ copy.querySelector("#publishHelp")?.remove();
+
+ const html = "<!DOCTYPE html>\n" + copy.outerHTML;
+ const blob = new Blob([html],{type:"text/html;charset=utf-8"});
+ const url = URL.createObjectURL(blob);
+ const link = document.createElement("a");
+ link.href = url;
+ link.download = "index.html";
+ document.body.appendChild(link);
+ link.click();
+ link.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+
+ alert("Downloaded! Now upload this index.html to GitHub and replace the old index.html.");
+}
 </script>
 
 </body>
