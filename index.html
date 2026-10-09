@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +64,29 @@ input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;o
 .sunflower-btn{font-size:150px;cursor:pointer;display:inline-block;transition:transform .3s}
 .sunflower-btn:hover{transform:scale(1.08)}
 .click-text{font-size:18px;margin-top:10px}
+
+/* Small floating heart button for editing */
+#publishBtn{
+ position:fixed;
+ right:16px;
+ bottom:18px;
+ z-index:9999;
+ width:46px;
+ height:46px;
+ padding:0;
+ margin:0;
+ border:1px solid #e5cd86;
+ border-radius:50%;
+ background:#fffdf3;
+ color:#8b681c;
+ font-size:22px;
+ box-shadow:0 4px 15px #64460a22;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+}
+#publishBtn:hover{transform:scale(1.06)}
+
 @media(max-width:650px){
  h1{font-size:34px}
  .countdown-box h1{font-size:40px}
@@ -123,8 +147,8 @@ input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;o
 <section id="menuScreen" class="screen hidden">
  <div class="menu">
   <h1>For My Shanze ❤️</h1>
-  <button class="main-btn" id="publishBtn" onclick="publishForVisitors()">Prepare Website for Visitors ❤️</button>
-  <p class="click-text" id="publishHelp">After editing your text, click this button. Then upload the downloaded index.html to GitHub.</p>
+
+  <button id="publishBtn" onclick="publishForVisitors()" title="Save your edits for the website" aria-label="Save website edits">♥</button>
 
   <div class="menu-grid">
    <button class="menu-card" onclick="openSection('letter')"><span class="panda">🐼</span>A Letter From Me 💌</button>
@@ -335,7 +359,7 @@ document.addEventListener("input",function(event){
 });
 window.addEventListener("load",loadEdits);
 
-/* Download a visitor-ready HTML containing all the current text */
+/* Download visitor-ready HTML with current text */
 function publishForVisitors(){
  saveEdits();
 
@@ -350,8 +374,8 @@ function publishForVisitors(){
   }
  });
 
+ /* Remove the private editing button from the visitor copy */
  copy.querySelector("#publishBtn")?.remove();
- copy.querySelector("#publishHelp")?.remove();
 
  const html = "<!DOCTYPE html>\n" + copy.outerHTML;
  const blob = new Blob([html],{type:"text/html;charset=utf-8"});
@@ -364,7 +388,7 @@ function publishForVisitors(){
  link.remove();
  setTimeout(()=>URL.revokeObjectURL(url),1000);
 
- alert("Downloaded! Now upload this index.html to GitHub and replace the old index.html.");
+ alert("Downloaded! Upload this index.html to GitHub and replace the old index.html.");
 }
 </script>
 
