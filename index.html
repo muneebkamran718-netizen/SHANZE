@@ -65,12 +65,12 @@ input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;o
 .sunflower-btn:hover{transform:scale(1.08)}
 .click-text{font-size:18px;margin-top:10px}
 
-/* Small floating heart button for editing */
+/* Floating heart editor button */
 #publishBtn{
  position:fixed;
  right:16px;
  bottom:18px;
- z-index:9999;
+ z-index:99999;
  width:46px;
  height:46px;
  padding:0;
@@ -84,6 +84,7 @@ input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;o
  display:flex;
  align-items:center;
  justify-content:center;
+ visibility:visible;
 }
 #publishBtn:hover{transform:scale(1.06)}
 
@@ -147,9 +148,6 @@ input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;o
 <section id="menuScreen" class="screen hidden">
  <div class="menu">
   <h1>For My Shanze ❤️</h1>
-
-  <button id="publishBtn" onclick="publishForVisitors()" title="Save your edits for the website" aria-label="Save website edits">♥</button>
-
   <div class="menu-grid">
    <button class="menu-card" onclick="openSection('letter')"><span class="panda">🐼</span>A Letter From Me 💌</button>
    <button class="menu-card" onclick="openSection('memories')"><span class="panda">🐼</span>Our Memories 📸</button>
@@ -256,6 +254,9 @@ Everything in this section can be edited ❤️</div>
   </div>
  </div>
 </section>
+
+<!-- Heart button is outside all screens, so it stays visible -->
+<button id="publishBtn" onclick="publishForVisitors()" title="Save your edits for the website" aria-label="Save website edits">♥</button>
 
 <script>
 const PASSWORD = "iloveyou1000";
@@ -376,6 +377,15 @@ function publishForVisitors(){
 
  /* Remove the private editing button from the visitor copy */
  copy.querySelector("#publishBtn")?.remove();
+
+ /* Prevent the visitor version from restoring old browser edits */
+ const copiedScript = copy.querySelector("script");
+ if(copiedScript){
+  copiedScript.textContent = copiedScript.textContent.replace(
+   'window.addEventListener("load",loadEdits);',
+   '/* Visitor version uses the text saved in this HTML file. */'
+  );
+ }
 
  const html = "<!DOCTYPE html>\n" + copy.outerHTML;
  const blob = new Blob([html],{type:"text/html;charset=utf-8"});
