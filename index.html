@@ -4,403 +4,245 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Shanze ❤️</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-
+<title>For My Baby Shanze ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Cormorant Garamond",serif;background:#fff8df;color:#5a451b;min-height:100vh;overflow-x:hidden}
-button{font-family:inherit;cursor:pointer}
+:root{--cream:#fff9e9;--yellow:#ffe58c;--pink:#f6cbd2;--brown:#624b42;--green:#647b50}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:'DM Sans',sans-serif}
+button{cursor:pointer;border:0;border-radius:30px;padding:13px 22px;background:var(--green);color:white;font:inherit}
+h1,h2,h3,.script{font-family:'Cormorant Garamond',serif}
+h1{font-size:clamp(2.7rem,8vw,5rem);line-height:1.05;margin:15px 0}
+h2{font-size:clamp(2rem,6vw,3rem)}
+p{line-height:1.85}
+section{padding:65px 20px;max-width:900px;margin:auto}
+.center{text-align:center}
 .hidden{display:none!important}
-.screen{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:25px;text-align:center;position:relative}
-.petal{position:fixed;top:-30px;font-size:20px;opacity:.65;animation:fall linear infinite;pointer-events:none;z-index:1}
-@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
-h1{font-family:"Playfair Display",serif;font-size:44px;margin-bottom:15px}
-.subtitle{font-size:22px;margin-bottom:25px}
-.main-btn{margin-top:15px;border:none;padding:14px 28px;border-radius:30px;background:#d9a928;color:white;font-size:19px;box-shadow:0 8px 20px #966e1433;transition:.25s}
-.main-btn:hover{transform:translateY(-2px)}
-.back{background:#6c5425;margin-bottom:25px}
-.password-box{max-width:450px;width:100%;background:#ffffffbf;padding:45px 30px;border-radius:30px;box-shadow:0 15px 50px #74581426}
-.sunflower{font-size:75px;margin-bottom:15px}
-input{width:100%;padding:15px 18px;border:1px solid #dfc97b;border-radius:15px;outline:none;font-size:18px;text-align:center;background:#fffdf3}
-.error{color:#b84c4c;margin-top:12px;font-size:17px}
-.countdown-box{max-width:850px}
-.countdown-box h1{font-size:55px}
-.countdown{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:30px 0}
-.time{background:white;min-width:120px;padding:20px 15px;border-radius:22px;box-shadow:0 10px 30px #64460a1f}
-.time span{display:block;font-size:42px;font-weight:600}
-.time small{font-size:17px}
-.enter-btn{background:#6c5425}
-.birthday-box{animation:fadeIn 1s ease}
-.birthday-box h1{font-size:65px}
-.heart{font-size:65px;margin:15px;animation:pulse 1.4s infinite}
-@keyframes pulse{50%{transform:scale(1.15)}}
-@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.menu{width:100%;max-width:900px;padding:30px 15px}
-.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.menu-card{background:white;border:none;border-radius:25px;padding:28px 20px;font-size:24px;color:#5a451b;box-shadow:0 10px 30px #64460a1a;transition:.3s}
-.menu-card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #64460a29}
-.panda{font-size:48px;display:block;margin-bottom:8px}
-.content{width:100%;max-width:950px;padding:40px 15px}
-.card{background:white;border-radius:25px;padding:25px;margin-bottom:20px;box-shadow:0 10px 30px #64460a1a}
-.letter{font-size:22px;line-height:1.7;text-align:left;min-height:300px;outline:none;white-space:pre-wrap}
-.memory-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.memory img{width:100%;height:330px;object-fit:contain;border-radius:18px;background:#f4e8b8;margin-bottom:10px}
-.editable{margin-top:12px;padding:10px;border-radius:10px;background:#fffaf0;outline:none;font-size:19px;white-space:pre-wrap}
-.song{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:18px;border-radius:18px;background:#fffaf0;margin-bottom:12px;font-size:21px}
-.song button{border:none;background:#d9a928;color:white;padding:9px 17px;border-radius:20px;font-size:16px}
-.details-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.detail-card{background:#fffaf0;padding:25px 20px;border-radius:22px;text-align:left;box-shadow:0 5px 18px #64460a0f}
-.detail-icon{font-size:38px;margin-bottom:8px}
-.detail-card h3{font-size:24px;margin-bottom:8px}
-.detail-card p{font-size:19px;line-height:1.5;outline:none;white-space:pre-wrap}
-.people-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.person{background:#fffaf0;padding:20px;border-radius:20px;text-align:left}
-.person strong{font-size:21px}
-.person p{margin-top:8px;font-size:19px;line-height:1.4;outline:none;white-space:pre-wrap}
-.sunflower-btn{font-size:150px;cursor:pointer;display:inline-block;transition:transform .3s}
-.sunflower-btn:hover{transform:scale(1.08)}
-.click-text{font-size:18px;margin-top:10px}
-
-/* Floating heart editor button */
-#publishBtn{
- position:fixed;
- right:16px;
- bottom:18px;
- z-index:99999;
- width:46px;
- height:46px;
- padding:0;
- margin:0;
- border:1px solid #e5cd86;
- border-radius:50%;
- background:#fffdf3;
- color:#8b681c;
- font-size:22px;
- box-shadow:0 4px 15px #64460a22;
- display:flex;
- align-items:center;
- justify-content:center;
- visibility:visible;
-}
-#publishBtn:hover{transform:scale(1.06)}
-
-@media(max-width:650px){
- h1{font-size:34px}
- .countdown-box h1{font-size:40px}
- .birthday-box h1{font-size:43px}
- .time{min-width:85px;padding:15px 10px}
- .time span{font-size:30px}
- .menu-grid,.memory-grid,.details-grid,.people-grid{grid-template-columns:1fr}
- .menu-card{font-size:22px}
- .memory img{height:240px}
-}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;background:radial-gradient(circle at top,#fff0b7,var(--cream) 65%)}
+.sunflower{font-size:90px;animation:float 3s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px) rotate(4deg)}}
+.panel{background:#fffdf5;border:1px solid #f1dfb2;border-radius:24px;padding:25px;margin:20px 0;box-shadow:0 8px 30px #6d53300d}
+input{padding:12px;border:1px solid #ddcda7;border-radius:12px;font:inherit;max-width:100%;margin:8px}
+nav{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:15px;position:sticky;top:0;background:#fff9e9ed;z-index:5;border-bottom:1px solid #f0e4c8}
+nav button{padding:10px 15px;font-size:.85rem}
+.letter{white-space:pre-line;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.9}
+.memories{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.memory img{width:100%;height:310px;object-fit:cover;border-radius:17px;background:#f4e8cc}
+.memory p{white-space:pre-line}
+.panda{font-size:44px}
+audio{width:100%}
+footer{text-align:center;padding:35px 15px;color:#917c68}
 </style>
 </head>
-
 <body>
 
-<div class="petal" style="left:8%;animation-duration:8s">🌼</div>
-<div class="petal" style="left:25%;animation-duration:11s">🌸</div>
-<div class="petal" style="left:45%;animation-duration:9s">🌼</div>
-<div class="petal" style="left:68%;animation-duration:12s">🌸</div>
-<div class="petal" style="left:88%;animation-duration:10s">🌼</div>
-
-<section id="passwordScreen" class="screen">
- <div class="password-box">
-  <div class="sunflower">🌻</div>
-  <h1>For Shanze</h1>
-  <p class="subtitle">A little something made just for you ❤️</p>
-  <input id="passwordInput" type="password" placeholder="Enter the password...">
-  <button class="main-btn" onclick="checkPassword()">Open ❤️</button>
-  <p id="passwordError" class="error"></p>
- </div>
-</section>
-
-<section id="countdownScreen" class="screen hidden">
- <div class="countdown-box">
-  <div class="sunflower">🌻</div>
-  <h1>Your Birthday Is Coming...</h1>
-  <p class="subtitle">November 6, 2026 ❤️</p>
-  <div class="countdown">
-   <div class="time"><span id="days">0</span><small>Days</small></div>
-   <div class="time"><span id="hours">0</span><small>Hours</small></div>
-   <div class="time"><span id="minutes">0</span><small>Minutes</small></div>
-   <div class="time"><span id="seconds">0</span><small>Seconds</small></div>
+<div class="hero" id="welcome">
+  <div>
+    <div class="sunflower">🌻</div>
+    <p class="script" style="font-size:1.5rem">A little world made just for you</p>
+    <h1>For My Baby,<br>Shanze Ali</h1>
+    <p>Made with all the love in my heart. ❤️</p>
+    <p><input id="password" type="password" placeholder="Our little secret"></p>
+    <button onclick="enterSite()">Come inside, baby ❤️</button>
+    <p id="error"></p>
   </div>
-  <button class="main-btn enter-btn" onclick="showBirthday()">Enter My Surprise ❤️</button>
- </div>
-</section>
+</div>
 
-<section id="birthdayScreen" class="screen hidden">
- <div class="birthday-box">
-  <div class="heart">❤️</div>
-  <h1>HAPPY BIRTHDAY BABY</h1>
-  <p class="subtitle">I HAVE A SURPRISE FOR YOU...</p>
-  <div class="sunflower-btn" onclick="showMenu()">🌻</div>
-  <p class="click-text">click the sunflower, baby...</p>
- </div>
-</section>
+<main id="site" class="hidden">
+  <header class="center" style="padding:35px 15px;background:#fff0b7">
+    <div class="sunflower" style="font-size:55px">🌻</div>
+    <h1>HAPPY BIRTHDAY BABY</h1>
+    <h2>I HAVE A SURPRISE FOR YOU ❤️</h2>
+    <p id="countdown"></p>
+  </header>
 
-<section id="menuScreen" class="screen hidden">
- <div class="menu">
-  <h1>For My Shanze ❤️</h1>
-  <div class="menu-grid">
-   <button class="menu-card" onclick="openSection('letter')"><span class="panda">🐼</span>A Letter From Me 💌</button>
-   <button class="menu-card" onclick="openSection('memories')"><span class="panda">🐼</span>Our Memories 📸</button>
-   <button class="menu-card" onclick="openSection('songs')"><span class="panda">🐼</span>Songs That Remind Me Of Her 🎵</button>
-   <button class="menu-card" onclick="openSection('details')"><span class="panda">🐼</span>Little Details About Shanze 🌻</button>
-   <button class="menu-card" onclick="openSection('people')"><span class="panda">🐼</span>Words From Her People 🥹</button>
-  </div>
- </div>
-</section>
+  <nav>
+    <button onclick="showSection('letter')">💌 Letter</button>
+    <button onclick="showSection('memories')">📸 Our Pictures</button>
+    <button onclick="showSection('songs')">🎶 Our Songs</button>
+    <button onclick="showSection('details')">🐼 Little Things</button>
+  </nav>
 
-<section id="letter" class="screen hidden">
- <div class="content">
-  <button class="main-btn back" onclick="showMenu()">← Back</button>
-  <h1>A Letter From Me 💌</h1>
-  <div class="card">
-   <div class="letter" contenteditable="true">My baby,
+  <!-- FULL LETTER SECTION -->
+  <section id="letter">
+    <div class="center">
+      <div class="panda">🐼💌🐼</div>
+      <h2>To My Birthday Girl</h2>
+      <p>Every word here is straight from my heart. ❤️</p>
+    </div>
 
-Write your letter here...
+    <article class="panel letter">My baby,
 
-Everything in this section can be edited ❤️</div>
-  </div>
- </div>
-</section>
+So here goes nothing. Happy birthday, my baby. Been a while since I wrote paragraphs, so I love you, Shanze Ali. I've loved you since day 1. I love you for who you are, for who you will be, for the way you carry yourself. I love you for everything you do. You doing something makes me wanna love you more. It's simple as that?? ❤️
 
-<section id="memories" class="screen hidden">
- <div class="content">
-  <button class="main-btn back" onclick="showMenu()">← Back</button>
-  <h1>Our Memories 📸</h1>
-  <div class="card">
-   <button class="main-btn" onclick="toggleAudio('memoryMusic',this)">▶ Play Our Memory Song</button>
-   <audio id="memoryMusic" src="Stephen Sanchez - Until I Found You (Lyrics).mp3"></audio>
-  </div>
+I love you, my baby. You mean so much to me, and I want you to feel loved, safe, appreciated, and cherished every single day. You deserve all the beautiful things this world has to offer.
 
-  <div class="memory-grid">
-   <div class="card memory"><img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our Memory 1"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-   <div class="card memory"><img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our Memory 2"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-   <div class="card memory"><img src="3.jpeg" alt="Our Memory 3"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-   <div class="card memory"><img src="4.jpeg" alt="Our Memory 4"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-   <div class="card memory"><img src="5.jpeg" alt="Our Memory 5"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-   <div class="card memory"><img src="6.jpeg" alt="Our Memory 6"><div class="editable" contenteditable="true">Write something about this memory...</div></div>
-  </div>
- </div>
-</section>
+I want to keep choosing you, keep understanding you, keep learning about you, and keep loving you through every version of yourself. On your best days and your difficult days, I want you to know that you don't have to be perfect to be loved by me.
 
-<section id="songs" class="screen hidden">
- <div class="content">
-  <button class="main-btn back" onclick="showMenu()">← Back</button>
-  <h1>Songs That Remind Me Of Her 🎵</h1>
-  <div class="card">
-   <div class="song"><h3>Birds of a Feather ❤️</h3><button onclick="playSong('song1',this)">▶ Play</button><audio id="song1" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio></div>
-   <div class="song"><h3>Salaam-E-Ishq ❤️</h3><button onclick="playSong('song2',this)">▶ Play</button><audio id="song2" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio></div>
-   <div class="song"><h3>Dildara ❤️</h3><button onclick="playSong('song3',this)">▶ Play</button><audio id="song3" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio></div>
-   <div class="song"><h3>Laung Da Lashkara ❤️</h3><button onclick="playSong('song4',this)">▶ Play</button><audio id="song4" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio></div>
-  </div>
- </div>
-</section>
+You make ordinary moments feel special. The little things you do, your smile, your expressions, and the way you are yourself mean more to me than I can explain. I hope I can give you even a little of the happiness you bring into my life.
 
-<section id="details" class="screen hidden">
- <div class="content">
-  <button class="main-btn back" onclick="showMenu()">← Back</button>
-  <h1>Little Details About Shanze 🌻</h1>
-  <div class="details-grid">
-   <div class="detail-card"><div class="detail-icon">🎨</div><h3>Her Favourite Colour</h3><p contenteditable="true">Write her favourite colour...</p></div>
-   <div class="detail-card"><div class="detail-icon">🎬</div><h3>Her Favourite Movie</h3><p contenteditable="true">Write her favourite movie...</p></div>
-   <div class="detail-card"><div class="detail-icon">🌻</div><h3>Her Favourite Flower</h3><p contenteditable="true">Write her favourite flower...</p></div>
-   <div class="detail-card"><div class="detail-icon">🎵</div><h3>Her Favourite Song</h3><p contenteditable="true">Write her favourite song...</p></div>
-   <div class="detail-card"><div class="detail-icon">😂</div><h3>Things She Likes To Say</h3><p contenteditable="true">Write the things she always says...</p></div>
-   <div class="detail-card"><div class="detail-icon">📍</div><h3>Her Favourite Place</h3><p contenteditable="true">Write her favourite place...</p></div>
-   <div class="detail-card"><div class="detail-icon">❤️</div><h3>What I Love About Her</h3><p contenteditable="true">Write what you love about her...</p></div>
-   <div class="detail-card"><div class="detail-icon">🥹</div><h3>Little Habits</h3><p contenteditable="true">Write her cute little habits...</p></div>
-   <div class="detail-card"><div class="detail-icon">🐼</div><h3>Her Favourite Animal</h3><p contenteditable="true">Write her favourite animal...</p></div>
-   <div class="detail-card"><div class="detail-icon">💕</div><h3>Her Favourite Thing</h3><p contenteditable="true">Write her favourite thing...</p></div>
-   <div class="detail-card"><div class="detail-icon">✨</div><h3>Things She Does</h3><p contenteditable="true">Write the cute/funny things she does...</p></div>
-   <div class="detail-card"><div class="detail-icon">🌸</div><h3>Cute Facts About Her</h3><p contenteditable="true">Write some cute facts about Shanze...</p></div>
-  </div>
- </div>
-</section>
+I want to make more memories with you, take more pictures with you, laugh with you over the most stupid things, and look back one day at everything we've experienced together. I want our love to be something we continue to build with patience, honesty, effort, and care.
 
-<section id="people" class="screen hidden">
- <div class="content">
-  <button class="main-btn back" onclick="showMenu()">← Back</button>
-  <h1>Words From Her People 🥹</h1>
-  <div class="card">
-   <button class="main-btn" onclick="toggleAudio('friendsMusic',this)">▶ Play Their Song</button>
-   <audio id="friendsMusic" src="Ed Sheeran - Photograph (Official Music Video).mp3"></audio>
-  </div>
-  <div class="people-grid">
-   <div class="person"><strong>Mashal</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Muneeba</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Ryan</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Bilal</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Raahim</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Moiz</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Eman</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Deeja</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Kami</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Muzammil</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Mohid</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Aiza</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Shayan</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Meerab</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>emaan jay</strong><p contenteditable="true">Write their message here...</p></div>
-   <div class="person"><strong>Mehreen</strong><p contenteditable="true">Write their message here...</p></div>
-  </div>
- </div>
-</section>
+I love the feeling of being close to you. When I was in your arms and chest, I felt so safe. It felt like home, and it was the best feeling ever. The world stopped for a while. It's like I was finally in my place. That's what you are to me, by the way. You're my home. ❤️
 
-<!-- Heart button is outside all screens, so it stays visible -->
-<button id="publishBtn" onclick="publishForVisitors()" title="Save your edits for the website" aria-label="Save website edits">♥</button>
+I cherish you every day for being so strong and carrying yourself the way you do. I notice how you keep going, even when things aren't easy. I hope you always remember that you deserve care too. You don't have to carry everything alone.
+
+I want to love you in ways that you can feel, not just through words. I want to listen to you, support you, celebrate your wins, comfort you when you need it, and remind you how precious you are to me.
+
+And yes, my girlfriend is so damn pretty. I could never get tired of looking at you. I want to keep making you smile, keep giving you reasons to feel loved, and keep collecting moments that become our favourite memories.
+
+I hope this new year of your life brings you peace, happiness, success, beautiful surprises, and so many reasons to smile. I hope you become everything you've dreamed of becoming. I'll always be proud of you for trying, growing, and being the person you are.
+
+I love you. Happy birthday, meri jaan. Have the best ever day. I just wanna show you this while I write this, but I HAVE TO WAIT. THAT'S SO SAD. KHAIR YAYYY ❤️</article>
+  </section>
+
+  <!-- ALL SIX PICTURES AND CAPTIONS -->
+  <section id="memories" class="hidden">
+    <div class="center">
+      <div class="panda">🐼🌻🐼</div>
+      <h2>Our Little Memories</h2>
+      <p>Every picture holds a little piece of us. ❤️</p>
+    </div>
+
+    <div class="memories">
+      <article class="panel memory">
+        <img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our memory 1">
+        <p>I've pasted this picture to let you know I cherish you every day for being so strong and carrying yourself like you do every day. This was a meetup I'd remember for life, and I'd never forgive you jitni meri khuwari hui btw but everything is worth it when it's you, baby ❤️</p>
+      </article>
+
+      <article class="panel memory">
+        <img src="WhatsApp Image 2026-10-06 at 12.10.02 PM.jpeg" alt="Our memory 2">
+        <p>I've pasted this to let you know, when I was in your arms and chest, I felt so safe. It felt like home, and it was the best feeling ever. The world stopped for a while. It's like I was finally in my place. That's what you are to me btw. You're my home ❤️</p>
+      </article>
+
+      <article class="panel memory">
+        <img src="3.jpeg" alt="Our memory 3">
+        <p>I've pasted this picture to let you know I cherish you every day for being so strong and carrying yourself like you do every day. This was a meetup I'd remember for life, and I'd never forgive you jitni meri khuwari hui btw but everything is worth it when it's you, baby ❤️</p>
+      </article>
+
+      <article class="panel memory">
+        <img src="4.jpeg" alt="Our memory 4">
+        <p>I've pasted this to let you know, when I was in your arms and chest, I felt so safe. It felt like home, and it was the best feeling ever. The world stopped for a while. It's like I was finally in my place. That's what you are to me btw. You're my home ❤️</p>
+      </article>
+
+      <article class="panel memory">
+        <img src="5.jpeg" alt="Our memory 5">
+        <p>AHH, this is so cute. One of my forever fav pictures of us. My girlfriend is so damn pretty. I've pasted this picture to let you know I'll keep loving you like this for the rest of my goddamn life :(( All I wanna do is love you and make you feel loved and safe because you deserve it, every bit of it. You're gonna receive kisses every 5 mins after we marry, btw 🙄.</p>
+      </article>
+
+      <article class="panel memory">
+        <img src="6.jpeg" alt="Our memory 6">
+        <p>This was the best call ever. You look so pretty sleeping :(( If I was with you, I'd stare at your face the whole night, watching you sleep, for how gorgeous you looked while sleeping, my baby :((</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SONGS -->
+  <section id="songs" class="hidden">
+    <div class="center">
+      <div class="panda">🐼🎶🐼</div>
+      <h2>Songs That Remind Me of You</h2>
+      <p>Press play and think of us, baby. ❤️</p>
+    </div>
+
+    <div class="panel">
+      <p>🎵 Until I Found You</p>
+      <audio controls preload="none" src="Stephen Sanchez - Until I Found You (Lyrics).mp3"></audio>
+
+      <p>🎵 Birds of a Feather</p>
+      <audio controls preload="none" src="Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3"></audio>
+
+      <p>🎵 Salaam-E-Ishq</p>
+      <audio controls preload="none" src="Salaam-E-Ishq (Full Song) Film - Salaam-E-Ishq.mp3"></audio>
+
+      <p>🎵 Dildara</p>
+      <audio controls preload="none" src="Lyrical Video： Dildara Song ｜ Ra.One ｜ ShahRukh Khan, Kareena Kapoor.mp3"></audio>
+
+      <p>🎵 Laung Da Lashkara</p>
+      <audio controls preload="none" src="Laung Da Lashkara (Official full song) ＂Patiala House＂ ｜ Feat. Akshay Kumar.mp3"></audio>
+
+      <p>🎵 Photograph</p>
+      <audio controls preload="none" src="Ed Sheeran - Photograph (Official Music Video).mp3"></audio>
+    </div>
+  </section>
+
+  <!-- LITTLE DETAILS -->
+  <section id="details" class="hidden">
+    <div class="center">
+      <div class="panda">🐼💛🐼</div>
+      <h2>Little Things About You</h2>
+    </div>
+
+    <div class="panel">
+      <h3>My favourite girl 🌻</h3>
+      <p>My favourite smile, my favourite face, my safe place, and the person I want to keep choosing.</p>
+    </div>
+
+    <div class="panel center">
+      <h2>Words From Her People 💌</h2>
+      <p>More messages and surprises will be added here. ❤️</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="sunflower" style="font-size:45px">🌻</div>
+    <p>Made for you, my baby Shanze Ali.</p>
+    <p>Happy birthday, meri jaan. I love you. ❤️</p>
+  </footer>
+</main>
 
 <script>
-const PASSWORD = "iloveyou1000";
-const birthdayDate = new Date("2026-11-06T00:00:00").getTime();
-let countdownTimer;
-let currentAudio = null;
+const SECRET = "iloveyou1000";
 
-function checkPassword(){
- const input = document.getElementById("passwordInput").value;
- if(input === PASSWORD){
-  document.getElementById("passwordScreen").classList.add("hidden");
-  document.getElementById("countdownScreen").classList.remove("hidden");
-  startCountdown();
- }else{
-  document.getElementById("passwordError").innerText = "Hmm... that's not it baby 😂❤️";
- }
-}
-
-function startCountdown(){
- function updateCountdown(){
-  const distance = birthdayDate - new Date().getTime();
-  if(distance <= 0){
-   clearInterval(countdownTimer);
-   showBirthday();
-   return;
+function enterSite(){
+  const value = document.getElementById("password").value;
+  if(value === SECRET){
+    document.getElementById("welcome").classList.add("hidden");
+    document.getElementById("site").classList.remove("hidden");
+    updateCountdown();
+  }else{
+    document.getElementById("error").textContent="Wrong secret, baby. Try again ❤️";
   }
-  document.getElementById("days").innerText = Math.floor(distance/(1000*60*60*24));
-  document.getElementById("hours").innerText = String(Math.floor((distance%(1000*60*60*24))/(1000*60*60))).padStart(2,"0");
-  document.getElementById("minutes").innerText = String(Math.floor((distance%(1000*60*60))/(1000*60))).padStart(2,"0");
-  document.getElementById("seconds").innerText = String(Math.floor((distance%(1000*60))/1000)).padStart(2,"0");
- }
- updateCountdown();
- countdownTimer = setInterval(updateCountdown,1000);
 }
 
-function hideAll(){
- document.querySelectorAll(".screen").forEach(screen=>screen.classList.add("hidden"));
-}
-function showBirthday(){
- clearInterval(countdownTimer);
- hideAll();
- document.getElementById("birthdayScreen").classList.remove("hidden");
-}
-function showMenu(){
- hideAll();
- document.getElementById("menuScreen").classList.remove("hidden");
-}
-function openSection(id){
- hideAll();
- document.getElementById(id).classList.remove("hidden");
-}
-
-function playSong(id,button){
- const audio = document.getElementById(id);
- if(currentAudio && currentAudio !== audio){
-  currentAudio.pause();
-  currentAudio.currentTime = 0;
- }
- if(audio.paused){
-  audio.play();
-  button.innerText = "⏸ Pause";
-  currentAudio = audio;
- }else{
-  audio.pause();
-  button.innerText = "▶ Play";
- }
-}
-function toggleAudio(id,button){
- const audio = document.getElementById(id);
- if(currentAudio && currentAudio !== audio){
-  currentAudio.pause();
-  currentAudio.currentTime = 0;
- }
- if(audio.paused){
-  audio.play();
-  button.innerText = "⏸ Pause";
-  currentAudio = audio;
- }else{
-  audio.pause();
-  button.innerText = "▶ Play";
- }
-}
-
-/* Automatically save edits in this browser */
-function saveEdits(){
- document.querySelectorAll('[contenteditable="true"]').forEach((element,index)=>{
-  localStorage.setItem("shanze_edit_"+index,element.innerHTML);
- });
-}
-
-/* Restore edits previously saved in this browser */
-function loadEdits(){
- document.querySelectorAll('[contenteditable="true"]').forEach((element,index)=>{
-  const saved = localStorage.getItem("shanze_edit_"+index);
-  if(saved !== null) element.innerHTML = saved;
- });
-}
-
-document.addEventListener("input",function(event){
- if(event.target && event.target.matches('[contenteditable="true"]')) saveEdits();
+document.getElementById("password").addEventListener("keydown",e=>{
+  if(e.key==="Enter") enterSite();
 });
-window.addEventListener("load",loadEdits);
 
-/* Download visitor-ready HTML with current text */
-function publishForVisitors(){
- saveEdits();
-
- const copy = document.documentElement.cloneNode(true);
- const originalEditable = document.querySelectorAll('[contenteditable="true"]');
- const copiedEditable = copy.querySelectorAll('[contenteditable="true"]');
-
- originalEditable.forEach((element,index)=>{
-  if(copiedEditable[index]){
-   copiedEditable[index].innerHTML = element.innerHTML;
-   copiedEditable[index].removeAttribute("contenteditable");
-  }
- });
-
- /* Remove the private editing button from the visitor copy */
- copy.querySelector("#publishBtn")?.remove();
-
- /* Prevent the visitor version from restoring old browser edits */
- const copiedScript = copy.querySelector("script");
- if(copiedScript){
-  copiedScript.textContent = copiedScript.textContent.replace(
-   'window.addEventListener("load",loadEdits);',
-   '/* Visitor version uses the text saved in this HTML file. */'
-  );
- }
-
- const html = "<!DOCTYPE html>\n" + copy.outerHTML;
- const blob = new Blob([html],{type:"text/html;charset=utf-8"});
- const url = URL.createObjectURL(blob);
- const link = document.createElement("a");
- link.href = url;
- link.download = "index.html";
- document.body.appendChild(link);
- link.click();
- link.remove();
- setTimeout(()=>URL.revokeObjectURL(url),1000);
-
- alert("Downloaded! Upload this index.html to GitHub and replace the old index.html.");
+function showSection(id){
+  ["letter","memories","songs","details"].forEach(sectionId=>{
+    document.getElementById(sectionId).classList.toggle("hidden",sectionId!==id);
+  });
+  window.scrollTo({top:0,behavior:"smooth"});
 }
-</script>
 
+function updateCountdown(){
+  const birthday = new Date("2026-11-06T00:00:00");
+  const now = new Date();
+  const diff = birthday-now;
+  const el=document.getElementById("countdown");
+
+  if(diff<=0){
+    el.textContent="IT'S YOUR BIRTHDAY, BABY!! HAPPY BIRTHDAY ❤️🌻";
+    return;
+  }
+
+  const days=Math.floor(diff/86400000);
+  const hours=Math.floor((diff%86400000)/3600000);
+  const minutes=Math.floor((diff%3600000)/60000);
+  const seconds=Math.floor((diff%60000)/1000);
+
+  el.textContent=`Your birthday in: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds ❤️`;
+  setTimeout(updateCountdown,1000);
+}
+
+document.querySelectorAll("audio").forEach(player=>{
+  player.addEventListener("play",()=>{
+    document.querySelectorAll("audio").forEach(other=>{
+      if(other!==player) other.pause();
+    });
+  });
+});
+</script>
 </body>
 </html>
