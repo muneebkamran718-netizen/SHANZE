@@ -5,37 +5,183 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For My Baby Shanze ❤️</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--cream:#fff9e9;--yellow:#ffe58c;--pink:#f6cbd2;--brown:#624b42;--green:#647b50}
+:root{
+  --cream:#fff9e9;
+  --yellow:#ffe58c;
+  --pink:#f6cbd2;
+  --brown:#624b42;
+  --green:#647b50;
+  --soft:#fffdf5;
+}
 *{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--brown);font-family:'DM Sans',sans-serif}
-button{cursor:pointer;border:0;border-radius:30px;padding:13px 22px;background:var(--green);color:white;font:inherit}
-h1,h2,h3,.script{font-family:'Cormorant Garamond',serif}
-h1{font-size:clamp(2.7rem,8vw,5rem);line-height:1.05;margin:15px 0}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--brown);
+  font-family:'DM Sans',sans-serif;
+}
+button{
+  cursor:pointer;
+  border:0;
+  border-radius:30px;
+  padding:13px 22px;
+  background:var(--green);
+  color:white;
+  font:inherit;
+  transition:transform .2s,opacity .2s;
+}
+button:hover{transform:translateY(-2px);opacity:.92}
+h1,h2,h3,.script{
+  font-family:'Cormorant Garamond',serif;
+}
+h1{
+  font-size:clamp(2.7rem,8vw,5rem);
+  line-height:1.05;
+  margin:15px 0;
+}
 h2{font-size:clamp(2rem,6vw,3rem)}
+h3{font-size:1.7rem;margin:10px 0}
 p{line-height:1.85}
-section{padding:65px 20px;max-width:900px;margin:auto}
+section{
+  padding:65px 20px;
+  max-width:1000px;
+  margin:auto;
+}
 .center{text-align:center}
 .hidden{display:none!important}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:25px;background:radial-gradient(circle at top,#fff0b7,var(--cream) 65%)}
-.sunflower{font-size:90px;animation:float 3s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-10px) rotate(4deg)}}
-.panel{background:#fffdf5;border:1px solid #f1dfb2;border-radius:24px;padding:25px;margin:20px 0;box-shadow:0 8px 30px #6d53300d}
-input{padding:12px;border:1px solid #ddcda7;border-radius:12px;font:inherit;max-width:100%;margin:8px}
-nav{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;padding:15px;position:sticky;top:0;background:#fff9e9ed;z-index:5;border-bottom:1px solid #f0e4c8}
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  background:radial-gradient(circle at top,#fff0b7,var(--cream) 65%);
+}
+.sunflower{
+  font-size:90px;
+  animation:float 3s ease-in-out infinite;
+}
+@keyframes float{
+  50%{transform:translateY(-10px) rotate(4deg)}
+}
+.panel{
+  background:var(--soft);
+  border:1px solid #f1dfb2;
+  border-radius:24px;
+  padding:25px;
+  margin:20px 0;
+  box-shadow:0 8px 30px #6d53300d;
+}
+input{
+  padding:12px;
+  border:1px solid #ddcda7;
+  border-radius:12px;
+  font:inherit;
+  max-width:100%;
+  margin:8px;
+}
+nav{
+  display:flex;
+  gap:9px;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding:15px;
+  position:sticky;
+  top:0;
+  background:#fff9e9ed;
+  backdrop-filter:blur(12px);
+  z-index:5;
+  border-bottom:1px solid #f0e4c8;
+}
 nav button{padding:10px 15px;font-size:.85rem}
-.letter{white-space:pre-line;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.9}
-.memories{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
-.memory img{width:100%;height:310px;object-fit:cover;border-radius:17px;background:#f4e8cc}
+.letter{
+  white-space:pre-line;
+  text-align:left;
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.25rem;
+  line-height:1.9;
+}
+.memories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.memory img{
+  width:100%;
+  height:310px;
+  object-fit:cover;
+  border-radius:17px;
+  background:#f4e8cc;
+}
 .memory p{white-space:pre-line}
 .panda{font-size:44px}
 audio{width:100%}
-footer{text-align:center;padding:35px 15px;color:#917c68}
+footer{
+  text-align:center;
+  padding:35px 15px;
+  color:#917c68;
+}
+.detail-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
+}
+.detail-card{
+  background:#fffdf5;
+  border:1px solid #f1dfb2;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 8px 30px #6d53300a;
+}
+.detail-card h3{color:#647b50}
+.detail-card p{margin-bottom:0}
+.message-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:18px;
+  align-items:start;
+}
+.message-card{
+  background:#fffdf5;
+  border:1px solid #f1dfb2;
+  border-radius:22px;
+  padding:23px;
+  box-shadow:0 8px 30px #6d53300a;
+}
+.message-card h3{
+  color:#647b50;
+  margin-top:0;
+}
+.message-card p{
+  white-space:pre-line;
+  overflow-wrap:anywhere;
+}
+.section-heading{margin-bottom:30px}
+.heart-divider{
+  text-align:center;
+  color:#d89aa8;
+  letter-spacing:8px;
+  margin:25px 0;
+}
+@media(max-width:600px){
+  section{padding:45px 15px}
+  .panel{padding:19px}
+  nav{gap:6px}
+  nav button{padding:9px 12px;font-size:.78rem}
+  .message-grid{grid-template-columns:1fr}
+}
 </style>
 </head>
+
 <body>
 
+<!-- SUNFLOWER WELCOME / PASSWORD SCREEN -->
 <div class="hero" id="welcome">
   <div>
     <div class="sunflower">🌻</div>
@@ -49,6 +195,8 @@ footer{text-align:center;padding:35px 15px;color:#917c68}
 </div>
 
 <main id="site" class="hidden">
+
+  <!-- BIRTHDAY HEADER -->
   <header class="center" style="padding:35px 15px;background:#fff0b7">
     <div class="sunflower" style="font-size:55px">🌻</div>
     <h1>HAPPY BIRTHDAY BABY</h1>
@@ -56,6 +204,7 @@ footer{text-align:center;padding:35px 15px;color:#917c68}
     <p id="countdown"></p>
   </header>
 
+  <!-- NAVIGATION -->
   <nav>
     <button onclick="showSection('letter')">💌 Letter</button>
     <button onclick="showSection('memories')">📸 Our Pictures</button>
@@ -63,9 +212,9 @@ footer{text-align:center;padding:35px 15px;color:#917c68}
     <button onclick="showSection('details')">🐼 Little Things</button>
   </nav>
 
-  <!-- FULL LETTER SECTION -->
+  <!-- LETTER -->
   <section id="letter">
-    <div class="center">
+    <div class="center section-heading">
       <div class="panda">🐼💌🐼</div>
       <h2>To My Birthday Girl</h2>
       <p>Every word here is straight from my heart. ❤️</p>
@@ -96,15 +245,16 @@ I hope this new year of your life brings you peace, happiness, success, beautifu
 I love you. Happy birthday, meri jaan. Have the best ever day. I just wanna show you this while I write this, but I HAVE TO WAIT. THAT'S SO SAD. KHAIR YAYYY ❤️</article>
   </section>
 
-  <!-- ALL SIX PICTURES AND CAPTIONS -->
+  <!-- SIX PICTURES -->
   <section id="memories" class="hidden">
-    <div class="center">
+    <div class="center section-heading">
       <div class="panda">🐼🌻🐼</div>
       <h2>Our Little Memories</h2>
       <p>Every picture holds a little piece of us. ❤️</p>
     </div>
 
     <div class="memories">
+
       <article class="panel memory">
         <img src="WhatsApp Image 2026-10-06 at 12.09.56 PM.jpeg" alt="Our memory 1">
         <p>I've pasted this picture to let you know I cherish you every day for being so strong and carrying yourself like you do every day. This was a meetup I'd remember for life, and I'd never forgive you jitni meri khuwari hui btw but everything is worth it when it's you, baby ❤️</p>
@@ -134,12 +284,13 @@ I love you. Happy birthday, meri jaan. Have the best ever day. I just wanna show
         <img src="6.jpeg" alt="Our memory 6">
         <p>This was the best call ever. You look so pretty sleeping :(( If I was with you, I'd stare at your face the whole night, watching you sleep, for how gorgeous you looked while sleeping, my baby :((</p>
       </article>
+
     </div>
   </section>
 
-  <!-- SONGS -->
+  <!-- SONGS: ORIGINAL SONGS AND FILENAMES UNCHANGED -->
   <section id="songs" class="hidden">
-    <div class="center">
+    <div class="center section-heading">
       <div class="panda">🐼🎶🐼</div>
       <h2>Songs That Remind Me of You</h2>
       <p>Press play and think of us, baby. ❤️</p>
@@ -166,29 +317,214 @@ I love you. Happy birthday, meri jaan. Have the best ever day. I just wanna show
     </div>
   </section>
 
-  <!-- LITTLE DETAILS -->
+  <!-- LITTLE DETAILS ABOUT SHANZE -->
   <section id="details" class="hidden">
-    <div class="center">
+    <div class="center section-heading">
       <div class="panda">🐼💛🐼</div>
-      <h2>Little Things About You</h2>
+      <h2>Little Details About Shanze 🌻</h2>
+      <p>All the little things that make you, YOU. ❤️</p>
     </div>
 
-    <div class="panel">
-      <h3>My favourite girl 🌻</h3>
-      <p>My favourite smile, my favourite face, my safe place, and the person I want to keep choosing.</p>
+    <div class="detail-grid">
+
+      <article class="detail-card">
+        <h3>Her Favourite Colour 💜</h3>
+        <p>Purple 💜💜</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Movie 🎬</h3>
+        <p>The Fault in Our Stars.</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Flowers 🌻</h3>
+        <p>Tulips and sunflowers 🌻🌷</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Songs 🎶</h3>
+        <p>Photograph</p>
+        <p>Until I Found You</p>
+        <p>Falling in Love with You</p>
+        <p>Saiyyan</p>
+        <p>Pal Pal Dil Ke Paas</p>
+        <p>Lag Ja Gale</p>
+        <p>Ae Mere Humsafar</p>
+        <p>Rajheya Ve</p>
+        <p>Kabhi Kabhi</p>
+        <p>Jab Tu Yaad Aye</p>
+        <p>Alfaaz</p>
+        <p>Hur Baar</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Things She Likes To Say 💬</h3>
+        <p>“batameezi na ho”</p>
+        <p>“marungi”</p>
+        <p>“pait dard hora ha”</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Place 🌎</h3>
+        <p>Niagara Falls 💛</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>What I Love About Her ❤️</h3>
+        <p>1. The way she shows me love at times.</p>
+        <p>2. Her small updates.</p>
+        <p>3. How she doesn't judge me at times.</p>
+        <p>4. She's my best friend and my girlfriend.</p>
+        <p>5. Everything she does, basically tho (LOL).</p>
+        <p>6. Her cute laugh and smile.</p>
+        <p>7. The way she makes my day better.</p>
+        <p>8. Her pure heart.</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Little Habits 🌷</h3>
+        <p>When she's mad, she gets quiet and doesn't talk.</p>
+        <p>She likes spilling perfume.</p>
+        <p>She makes sure to be kind.</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Animals 🐼</h3>
+        <p>Pandas, rabbits, and Leo 🐼🐰</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Her Favourite Things 💤</h3>
+        <p>She loves to sleep.</p>
+        <p>She loves Mirinda.</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Things She Does 😂</h3>
+        <p>Laughs at the most lame jokes ever.</p>
+        <p>Tries to be dominant when she's just a cute little baby.</p>
+        <p>Cries when I hold her arms back.</p>
+      </article>
+
+      <article class="detail-card">
+        <h3>Cute Facts About Her 💛</h3>
+        <p>She gets happy at the smallest things, especially a McDonald's box.</p>
+        <p>She loves organising birthdays even though her room is always messy.</p>
+      </article>
+
     </div>
 
-    <div class="panel center">
+    <div class="heart-divider">♥ ♥ ♥</div>
+
+    <!-- WORDS FROM HER PEOPLE -->
+    <div class="center section-heading">
+      <div class="panda">🐼💌🐼</div>
       <h2>Words From Her People 💌</h2>
-      <p>More messages and surprises will be added here. ❤️</p>
+      <p>Little messages from the people who love you. Save every word, birthday girl. ❤️</p>
+    </div>
+
+    <div class="message-grid">
+
+      <article class="message-card">
+        <h3>💌 Mashal</h3>
+        <p>Shanze,I’m not writing this to my friend but my sister. I can’t describe the Love I have for you, the little cute things you always do, the expressions u make man I can’t even be mad at u.youre one of the purest souls I know and Thankyou so much for being there for me when no one was, Thankyou for being there for me when the closest friends of mine couldn’t help me, Thankyou for always believing me and Never leaving my side. I won’t be lying if I say God litr sent you as a blessing in my life. I can’t imagine life without you now the only regret I have was not getting to know you sooner Allah tumhe hamesha khush rakhe Aur Tumhare naseeb ache kure I love you sm man Thankyou for being the best sister ever&lt;3</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Muneeba</h3>
+        <p>to the sweetest woman i know🤍 shanze i havent known you for a very long time, probably 8 months at best, and yet something about your bubbly, joyful and loving personality makes me feel like we've known eachother forever. youre the kind of person that brings joy with her wherever she goes and that's rare to find. i may not say it enough, but you make life a little less harder and a lot more happier without even trying, each time that im around you☹️🤍 anyone and everyone that has had the privilege to know you, is lucky to have someone so kind, loving, soft, and supportive around them. youre a sweet ball of sunshine and your presence alone on most days is enough to make my day better. i hope your 20th is full of khair and happiness, you will always be a part of my duas no matter where life takes us, happy birthday lovergirl💗 (P.S: we're DEFINITELY planning our babies together, i will set you on fire if you get pregnant without priorly informing me🖕🏻 ok ly bye)</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Ryan</h3>
+        <p>Happy birthday to my partner in crime. You’re not just my sister, you’re my built-in best friend, my diary, my therapist, and my biggest headache all in one. We share everything — from secrets to stupid jokes to last piece of biryani. You’re dumb, you’re full pagal, and honestly without your pagalpanti my life would be so boring. I love how we can talk about literally anything without any filter. Thank you for being you — my dumb, pagal, but most lovable sister. Love you so much, birthday girl!❤️</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Bilal</h3>
+        <p>Happppppy buddddday janiiiiii. Gotta say, being friends with you was definitely not in my bingo card but here we are. Gotta say i absolutely love the frenship we have, itne kam time main itni chillings hogyi hain. Feels unreal man. Means alot all that you do and have done for me throughout this tenure. Han chalta phira ragebait ho. Meter shaat krti ho but kher hogyi. Itna chalta hay. Happy birthday kiddo 🐐🐐🐐</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Raahim</h3>
+        <p>Happy birthday Chinese Japanese Im the person jiskay concept se apko Chir hai May Allah always shower blessings upon you and keep you happy,safe and healthy and I’m pretty sure you’re gonna stay genuine to the people you love Khush raho Abaad raho hasti raho</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Moiz</h3>
+        <p>HAPPY BIRTHDAY SHANZEE this the socket boy im still really glad u guys choose me to be in ur group on the frst day of univ or i wud hve lwk been frndless ANYWAYS apart frm this u hve been a GREATTT frmd to me u helped me thru my hard times too i hope u alwayssss stay happyy &gt;&lt; nd yeah we gotta do the monday milkshake smday bro…</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Eman</h3>
+        <p>Happy Happy Happy Wala birthday ride and die I literally love you so so sooo much. Ur one of those people I can trust blindly litr knowing u won’t rat me out (I will kill u if u do btw) anyways, I love our rants and ur unhinged lore. Please🙏🏻 I know how strong u are and despite the shit life throws at u, u still manage to slay and be a baddie. Just wanted u to know i appreciate you so much and love u w all my heart. May Allah bless you w a beautiful naseeb and long life ameen. 😘😘</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Deeja</h3>
+        <p>happy birthday shanze Shanze is literally the sweetest person alive. I love you shanze❤️ You’re the sweetest. Youre so pretty, kind, intelligent and loving. Youre literally THE NICEST person alive. Im so blessed to have you in my life❤️🫂</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Kami</h3>
+        <p>hii shanzee this is kami you're homeboy soooo happyyy birthday and yes you're an amazing person and you deserve better than muneeb jk you're genuinely such a caring and amazing person and also we share the same taste so that's very goated of us. soo pliss short vms kiya karo warna calls and calls hi karni parengi but fr i hope you always stay happy and get everything you wish for because you deserve sm good things. never change the way you are and keep being your amazing self. i hope you have the best birthday everrr and enjoy your day to the fullest. once again happiest birthdayyy shanzee❤️</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Muzammil</h3>
+        <p>happy birthday gng, shanze I'm gonna be very honest I normally don't interact with new people and I don't like making new friends but genuinely talking to you made me feel like I've know you for such a long time and there wasn't any awkwardness in it which makes me really happy, your so fun to hangout with I loved your company and your so supportive in everything it makes me feel like I have another big sister, the way you reacted to my result and the way you were happy for it made me feel so good, your genuinely one of the nicest people I've known. Hope you stay the same forever gnggggg love uuuuu</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Mohid</h3>
+        <p>happy birthday bhabhi idk what to say but one thing is for sure, you are my fav bhabhi and idk why but i feel like muneeb is very different with you. I’ve known muneeb for years and he’s never been this happy. I’ve never seen him smile like that although he smiles better when he’s w me but that’s beside the point. Fav couple for sure&lt;33</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Aiza</h3>
+        <p>HAPPIEST BIRTHDAY SHANZE🩶 Even tho I have barely spoken to u I absolutely loved your energy it was so welcoming and ur literally the sweetest I had sm fun being mean to the boys with you (we should do that again). I hope you have the best birthday ever cant wait to see the gorgeous birthday pictures😛. HAVE FUNNN</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Shayan</h3>
+        <p>Happy birthday shanzeee Shanze is one of the goated bhabhi i ever had what a sense of humour sahi pakar ke rakha hua muneeb ko proud of u although u goiz make me jealous but i love u goiz u are amazing u da real g ur one of us&lt;3</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Meerab</h3>
+        <p>i love shanzey. She is the best person in muneebs life. Muneebs life is so boring and ass but since shanzey came it has turned so much better that i have started to take an interest in muneebs life. Gen1ly shanzey is like a ray of sunshine. And muneeb is her side piece. Meetup w her was so goated. I lowk miss her.</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Emaan Jay</h3>
+        <p>Dearest shanze urf kharr dimagh road bestie,
+
+It’s been a crazy wild ride from us being in the same school early on but not knowing each other too well to us now being so close to each other.
+
+From our Kharr Dimagh Road memories to the swings, the puddle and the army stick, the chacha phone call and “jaanu apna jangiyah utaro”, the scrunchie and Anaya, school qawalli, jaani g burgers, ugly kid, professor cal, and the ABD suit — there are so many memories that will always make me laugh.
+
+Happy birthday sweetheart I love you 🤍.
+
+~Love Emaan Jay🤍</p>
+      </article>
+
+      <article class="message-card">
+        <h3>💌 Mehreen</h3>
+        <p>Happy Birthday Shanze Aapa! I’m genuinely so glad that we started hanging out again. Despite the huge gap that came in our friendship, it’s honestly crazy how close we’ve become again. I love how we can all be so chill and comfortable around you, and how there’s never any awkwardness. You’re genuinely such a fun person to be around. I’m grateful that we got the chance to reconnect and make up for all the time we missed. I hope this year brings you so much happiness, success, and everything you’ve been wishing for. You deserve the absolute best, and I hope you have the most amazing birthday ever! Love youu, happy birthday once again 😛</p>
+      </article>
+
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="sunflower" style="font-size:45px">🌻</div>
     <p>Made for you, my baby Shanze Ali.</p>
     <p>Happy birthday, meri jaan. I love you. ❤️</p>
+    <p class="script" style="font-size:1.4rem">Forever your Muneeb. 🐼💛</p>
   </footer>
+
 </main>
 
 <script>
@@ -196,12 +532,14 @@ const SECRET = "iloveyou1000";
 
 function enterSite(){
   const value = document.getElementById("password").value;
+
   if(value === SECRET){
     document.getElementById("welcome").classList.add("hidden");
     document.getElementById("site").classList.remove("hidden");
     updateCountdown();
   }else{
-    document.getElementById("error").textContent="Wrong secret, baby. Try again ❤️";
+    document.getElementById("error").textContent =
+      "Wrong secret, baby. Try again ❤️";
   }
 }
 
@@ -211,8 +549,12 @@ document.getElementById("password").addEventListener("keydown",e=>{
 
 function showSection(id){
   ["letter","memories","songs","details"].forEach(sectionId=>{
-    document.getElementById(sectionId).classList.toggle("hidden",sectionId!==id);
+    document.getElementById(sectionId).classList.toggle(
+      "hidden",
+      sectionId!==id
+    );
   });
+
   window.scrollTo({top:0,behavior:"smooth"});
 }
 
@@ -220,22 +562,25 @@ function updateCountdown(){
   const birthday = new Date("2026-11-06T00:00:00");
   const now = new Date();
   const diff = birthday-now;
-  const el=document.getElementById("countdown");
+  const el = document.getElementById("countdown");
 
   if(diff<=0){
     el.textContent="IT'S YOUR BIRTHDAY, BABY!! HAPPY BIRTHDAY ❤️🌻";
     return;
   }
 
-  const days=Math.floor(diff/86400000);
-  const hours=Math.floor((diff%86400000)/3600000);
-  const minutes=Math.floor((diff%3600000)/60000);
-  const seconds=Math.floor((diff%60000)/1000);
+  const days = Math.floor(diff/86400000);
+  const hours = Math.floor((diff%86400000)/3600000);
+  const minutes = Math.floor((diff%3600000)/60000);
+  const seconds = Math.floor((diff%60000)/1000);
 
-  el.textContent=`Your birthday in: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds ❤️`;
+  el.textContent =
+    `Your birthday in: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds ❤️`;
+
   setTimeout(updateCountdown,1000);
 }
 
+/* Only one song plays at a time. Existing audio files stay unchanged. */
 document.querySelectorAll("audio").forEach(player=>{
   player.addEventListener("play",()=>{
     document.querySelectorAll("audio").forEach(other=>{
@@ -244,5 +589,6 @@ document.querySelectorAll("audio").forEach(player=>{
   });
 });
 </script>
+
 </body>
 </html>
